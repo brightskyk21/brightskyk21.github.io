@@ -1,6 +1,17 @@
-var map = L.map('map').setView([37.53142, 126.9854], 12); // 중심좌표
+var mapOptions = {
+    center: new naver.maps.LatLng(37.53142, 126.9854),
+    zoom: 12
+};
 
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
+var map = new naver.maps.Map('map', mapOptions);
+
+var markerOptions = {
+    position: new naver.maps.LatLng(37.52402, 127.0385),
+    map: map
+};
+
+var marker = new naver.maps.Marker(markerOptions);
+
 
 // 예시 음식점 데이터
 var restaurants = [
@@ -84,5 +95,3 @@ map.on('popupopen', function(e) {
         }
     }
 });
-
-
