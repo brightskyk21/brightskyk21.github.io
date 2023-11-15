@@ -6,7 +6,7 @@ var mapOptions = {
 var map = new naver.maps.Map('map', mapOptions);
 
 var markerOptions = {
-    position: new naver.maps.LatLng(37.628156, 127.077821),
+    position: new naver.maps.LatLng(37.628181, 127.077827),
     map: map
 };
 
