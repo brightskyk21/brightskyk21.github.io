@@ -1,3 +1,29 @@
+function openRestaurantInfo(restaurantData) {
+    var modal = document.getElementById('restaurantModal');
+    // 예시: 식당 이름과 전화번호 설정
+    document.getElementById('restaurantName').innerText = restaurantData.name;
+    document.getElementById('restaurantPhone').innerText = restaurantData.phone;
+
+    // 웹사이트가 제공되지 않은 경우 '-'로 표시
+    var website = restaurantData.website === '-' ? '#' : restaurantData.website;
+    document.getElementById('restaurantWebsite').href = website;
+
+    modal.style.display = "block";
+
+    // 모달의 닫기 버튼
+    var span = document.getElementsByClassName("close")[0];
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
+
+    // 모달 외부 클릭시 닫기
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+}
+
 var mapOptions = {
     center: new naver.maps.LatLng(37.629835024085, 127.07629504),
     zoom: 17
