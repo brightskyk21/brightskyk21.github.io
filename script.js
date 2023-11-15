@@ -10,18 +10,18 @@ var restaurants = [
     {
         name: "쪼매매운떡볶이",
         phone: "02-977-1120",
-        website: "-",
         position: new naver.maps.LatLng(37.628181, 127.077827),
         menu: [
             { name: "떡볶이", price: "4,000원"},
-            { name: "튀김(3개)", price: "2,000원"}
+            { name: "튀김(3개)", price: "2,000원"},
+            { name: "순대", price: "4,000원"},
+            { name: "쪼매김밥", price: "1,500원"}
         ]
     }//,
     // 새로운 식당 데이터 추가
     //{
         //name: "새로운식당",
         //phone: "02-123-4567",
-        //website: "http://newrestaurant.com",
         //position: new naver.maps.LatLng(37.630000, 127.076000),
         //menu: [
             //{ name: "김밥", price: "3,000원"},
@@ -60,7 +60,6 @@ function openRestaurantInfo(restaurantData) {
             <div class="modal-header">
                 <h2 id="restaurantName">${restaurantData.name}</h2>
                 <p id="restaurantPhone">${restaurantData.phone}</p>
-                <a href="${restaurantData.website}" target="_blank">웹사이트</a>
             </div>
             <div class="modal-body">
                 <table>
