@@ -22,7 +22,8 @@
     margin: 15% auto; /* 상단 여백과 가운데 정렬 */
     padding: 20px;
     border: 1px solid #888;
-    width: 80%; /* 너비 */
+    width: 60%; /* 너비 */
+    border-radius: 15px;
 }
 
 /* 닫기 버튼 스타일 */
