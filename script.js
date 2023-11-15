@@ -10,7 +10,7 @@ var restaurants = [
     {
         name: "쪼매매운떡볶이",
         phone: "02-977-1120",
-        website: "http://jjoemae-tteokbokki.com",
+        website: "-",
         position: new naver.maps.LatLng(37.628181, 127.077827),
         menu: [
             { name: "떡볶이", price: "4,000원"},
