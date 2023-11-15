@@ -2,3 +2,42 @@
     width: 100%;
     height: 100vh;
 }
+
+.modal {
+    display: none; /* 초기 상태는 숨김 */
+    position: fixed; /* 화면에 고정 */
+    z-index: 1; /* 다른 요소들 위에 표시 */
+    left: 0;
+    top: 0;
+    width: 100%; /* 전체 너비 */
+    height: 100%; /* 전체 높이 */
+    overflow: auto; /* 필요시 스크롤바 추가 */
+    background-color: rgb(0, 0, 0); /* 배경 색상 */
+    background-color: rgba(0, 0, 0, 0.4); /* 투명도 설정 */
+}
+
+/* 모달 콘텐츠 스타일 */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 상단 여백과 가운데 정렬 */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* 너비 */
+}
+
+/* 닫기 버튼 스타일 */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
