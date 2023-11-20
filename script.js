@@ -4,71 +4,55 @@ var mapOptions = {
 };
 
 var map = new naver.maps.Map('map', mapOptions);
+var currentMarkers = [];
 
-// 각 식당에 대한 마커 생성
-restaurants.forEach(function(restaurant) {
+function clearMarkers() {
+    currentMarkers.forEach(function (marker) {
+        marker.setMap(null);
+    });
+    currentMarkers = [];
+}
+
+function createMarker(place) {
     var markerOptions = {
-        position: restaurant.position,
+        position: new naver.maps.LatLng(place.latitude, place.longitude),
         map: map
     };
 
     var marker = new naver.maps.Marker(markerOptions);
-
-    // 마커에 식당 데이터 연결
-    marker.restaurantData = restaurant;
-
-    // 마커 클릭 이벤트 리스너
-    naver.maps.Event.addListener(marker, 'click', function() {
-        openRestaurantInfo(marker.restaurantData);
+    naver.maps.Event.addListener(marker, 'click', function () {
+        openInfoWindow(marker, place);
     });
+
+    currentMarkers.push(marker);
+}
+
+function openInfoWindow(marker, place) {
+    var contentString = '<div class="info-window-content">' +
+                        '<h3>' + place.name + '</h3>' +
+                        '<p>' + place.category + '</p>' +
+                        // Add more place details here
+                        '</div>';
+
+    var infoWindow = new naver.maps.InfoWindow({
+        content: contentString
+    });
+
+    infoWindow.open(map, marker);
+}
+
+function showPlaces(places) {
+    clearMarkers();
+    places.forEach(createMarker);
+}
+
+document.getElementById('showRestaurants').addEventListener('click', function () {
+    showPlaces(restaurants); // Assuming 'restaurants' is an array of restaurant objects
 });
 
-function openRestaurantInfo(restaurantData) {
-    // 모달 요소를 찾음
-    var modal = document.getElementById('restaurantModal');
+document.getElementById('showCafes').addEventListener('click', function () {
+    showPlaces(cafes); // Assuming 'cafes' is an array of cafe objects
+});
 
-    // 팝업 내용을 위한 HTML 문자열 생성
-    var modalContentHtml = `
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <div class="modal-header">
-                <h2 id="restaurantName">${restaurantData.name}</h2>
-                <p id="restaurantPhone">${restaurantData.phone}</p>
-            </div>
-            <div class="modal-body">
-                <table>
-                    <tr>
-                        <th>메뉴</th>
-                        <th>가격</th>
-                    </tr>
-                    ${restaurantData.menu.map(function(item) {
-                        return `
-                            <tr>
-                                <td>${item.name}</td>
-                                <td>${item.price}</td>
-                            </tr>
-                        `;
-                    }).join('')}
-                </table>
-            </div>
-        </div>
-    `;
-
-    // 모달 내용을 업데이트
-    modal.innerHTML = modalContentHtml;
-
-    // 모달을 표시
-    modal.style.display = "block";
-
-    // 닫기 버튼 핸들러 설정
-    modal.querySelector(".close").onclick = function() {
-        modal.style.display = "none";
-    };
-
-    // 모달 외부 클릭시 닫기 핸들러 설정
-    window.onclick = function(event) {
-        if (event.target == modal) {
-            modal.style.display = "none";
-        }
-    };
-}
+// Initialize with restaurants shown
+showPlaces(restaurants);
