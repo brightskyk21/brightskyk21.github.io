@@ -15,7 +15,7 @@ function clearMarkers() {
 
 function createMarker(place) {
     var markerOptions = {
-        position: new naver.maps.LatLng(place.latitude, place.longitude),
+        position: place.position,
         map: map
     };
 
@@ -54,4 +54,3 @@ document.getElementById('showCafes').addEventListener('click', function () {
     showPlaces(cafes); // 'cafes'는 카페 객체 배열입니다.
 });
 
-// 마커를 초기에 표시하지 않기 위해 showPlaces 호출을 제거합니다.
