@@ -47,12 +47,11 @@ function showPlaces(places) {
 }
 
 document.getElementById('showRestaurants').addEventListener('click', function () {
-    showPlaces(restaurants); // Assuming 'restaurants' is an array of restaurant objects
+    showPlaces(restaurants); // 'restaurants'는 음식점 객체 배열입니다.
 });
 
 document.getElementById('showCafes').addEventListener('click', function () {
-    showPlaces(cafes); // Assuming 'cafes' is an array of cafe objects
+    showPlaces(cafes); // 'cafes'는 카페 객체 배열입니다.
 });
 
-// Initialize with restaurants shown
-showPlaces(restaurants);
+// 마커를 초기에 표시하지 않기 위해 showPlaces 호출을 제거합니다.
