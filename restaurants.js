@@ -13,7 +13,7 @@ var restaurants = [
       {
           name: "바우네수제왕돈까스",
           phone: "02-973-9431",
-          position: new naver.maps.LatLng(37.6304224436656, 127.075847309623),
+          position: new naver.maps.LatLng(37.630447, 127.075828),
           menu: [
               { name: "돈까스", price: "7,500원"},
               { name: "면류", price: "7,000원"},
@@ -24,7 +24,7 @@ var restaurants = [
       {
         name: "핏짜굽는언니 공릉점",
         phone: "02-979-0234",
-        position: new naver.maps.LatLng(37.6294843289736, 127.074730267462),
+        position: new naver.maps.LatLng(37.629480, 127.074726),
         menu: [
             { name: "마르게리따 핏짜", price: "13,000원"},
             { name: "루꼴라 카나디안", price: "19,000원"},
@@ -35,7 +35,7 @@ var restaurants = [
     {
       name: "더맛나곱창",
       phone: "02-948-5453",
-      position: new naver.maps.LatLng(37.6290301923195, 127.073646923188),
+      position: new naver.maps.LatLng(37.629082, 127.073567),
       menu: [
           { name: "야채곱창볶음", price: "8,000원"},
           { name: "야채순대볶음", price: "8,000원"},
@@ -45,17 +45,17 @@ var restaurants = [
   {
     name: "마인하우스",
     phone: "010-9988-7590",
-    position: new naver.maps.LatLng(37.6301688571216, 127.075923633615),
+    position: new naver.maps.LatLng(37.630191, 127.075949),
     menu: [
         { name: "치즈 닭 데리야끼", price: "5,500원"},
         { name: "돼지 데리야끼", price: "5,000원"},
         { name: "오리 데리야끼(반마리)", price: "16,000원"},
-    ]
+    ] //여기까지 경위도 수정
 },
 {
   name: "샹츠마라",
   phone: "0507-1383-8288",
-  position: new naver.maps.LatLng(37.6294635208267, 127.076132380936),
+  position: new naver.maps.LatLng(37.629606, 127.075986),
   menu: [
       { name: "샹츠마라샹궈", price: "15,000원"},
       { name: "샹츠마라탕", price: "8,000원"},
@@ -66,7 +66,7 @@ var restaurants = [
 {
   name: "찬이네곱창",
   phone: "02-974-3121",
-  position: new naver.maps.LatLng(37.6287789295751, 127.076722687514),
+  position: new naver.maps.LatLng(37.628731, 127.076840),
   menu: [
       { name: "야채곱창", price: "11,000원"},
       { name: "알곱창", price: "12,000원"},
@@ -77,7 +77,7 @@ var restaurants = [
 {
   name: "세겹먹는날",
   phone: "02-972-8322",
-  position: new naver.maps.LatLng(37.6289351122752, 127.076658389084),
+  position: new naver.maps.LatLng(37.628925, 127.076721),
   menu: [
       { name: "세집삼겹살(180g)", price: "9,900원"},
       { name: "벌집삽결살(180g)", price: "9,900원"},
@@ -88,7 +88,7 @@ var restaurants = [
 {
   name: "아리랑핫도그 과학기술대점",
   phone: "02-971-7090",
-  position: new naver.maps.LatLng(37.6286875823397, 127.077117729235),
+  position: new naver.maps.LatLng(37.628679, 127.077143),
   menu: [
       { name: "아리랑핫도그", price: "1,500원"},
       { name: "모짜렐라핫도그", price: "2,500원"},
@@ -110,7 +110,7 @@ var restaurants = [
 {
   name: "기린",
   phone: "0507-1319-2708",
-  position: new naver.maps.LatLng(37.6280892594919, 127.077496497098),
+  position: new naver.maps.LatLng(37.628067, 127.077497),
   menu: [
       { name: "돈코츠라멘", price: "6,900원"},
       { name: "카라구치라멘", price: "6,900원"},
@@ -121,7 +121,7 @@ var restaurants = [
 {
   name: "이정림수제햄부대찌개",
   phone: "0507-1339-3804",
-  position: new naver.maps.LatLng(37.6279118416065, 127.077654342837),
+  position: new naver.maps.LatLng(37.627944, 127.077582),
   menu: [
       { name: "부대찌개", price: "8,000원"},
       { name: "부대볶음", price: "8,000원"},
@@ -132,7 +132,7 @@ var restaurants = [
 {
   name: "로지스시",
   phone: "02-972-4003",
-  position: new naver.maps.LatLng(37.6276676357869, 127.077575923673),
+  position: new naver.maps.LatLng(37.6276614, 127.0776052),
   menu: [
       { name: "오마카세(12p)", price: "20,000원"},
       { name: "모둠초밥", price: "17,000원"},
@@ -154,7 +154,7 @@ var restaurants = [
 {
   name: "열화철판",
   phone: "02-6013-5892",
-  position: new naver.maps.LatLng(37.6274039553682, 127.077791452492),
+  position: new naver.maps.LatLng(37.627386, 127.077744),
   menu: [
       { name: "철판오돌뼈볶음", price: "18,000원"},
       { name: "철판제육볶음", price: "19,000원"},
@@ -165,7 +165,7 @@ var restaurants = [
 {
   name: "무봉리토종순대국 공릉점",
   phone: "02-977-7396",
-  position: new naver.maps.LatLng(37.627154835266, 127.07626924961),
+  position: new naver.maps.LatLng(37.627098, 127.076298),
   menu: [
       { name: "토종순대국", price: "9,000원"},
       { name: "모둠순대", price: "18,000원"},
@@ -176,7 +176,7 @@ var restaurants = [
 {
   name: "왕짜장",
   phone: "02-972-9822",
-  position: new naver.maps.LatLng(37.6273906385448, 127.078173539898),
+  position: new naver.maps.LatLng(37.627404, 127.078193),
   menu: [
       { name: "콩짜장", price: "5,500원"},
       { name: "간짜장", price: "6,500원"},
@@ -187,7 +187,7 @@ var restaurants = [
 {
   name: "스시쟁이",
   phone: "02-972-5944",
-  position: new naver.maps.LatLng(37.6271918895728, 127.078432067885),
+  position: new naver.maps.LatLng(37.627169, 127.078427),
   menu: [
       { name: "오늘의초밥(10p)", price: "12,000원"},
       { name: "연어초밥(18p)", price: "18,000원"},
@@ -198,7 +198,7 @@ var restaurants = [
 {
   name: "원조강영숙봉평메밀촌 본점",
   phone: "02-971-6953",
-  position: new naver.maps.LatLng(37.6268924202352,127.078674855457),
+  position: new naver.maps.LatLng(37.626903,127.078699),
   menu: [
       { name: "물막국수", price: "9,000원"},
       { name: "비빔막국수", price: "9,000원"},
@@ -220,7 +220,7 @@ var restaurants = [
 {
   name: "지호한방삼계탕 공릉점",
   phone: "02-948-2300",
-  position: new naver.maps.LatLng(37.6259669387939, 127.080922038126),
+  position: new naver.maps.LatLng(37.626106, 127.079870),
   menu: [
       { name: "건강한방삼계탕", price: "17,000원"},
       { name: "얼큰한방삼계탕", price: "18,000원"},
@@ -231,7 +231,7 @@ var restaurants = [
 {
   name: "로지다이닝키친",
   phone: "02-974-0100",
-  position: new naver.maps.LatLng(37.6262075031908, 127.078520185307),
+  position: new naver.maps.LatLng(37.626126, 127.078574),
   menu: [
       { name: "호르몬덮밥", price: "11,500원"},
       { name: "일본식회덮밥", price: "10,000원"},
@@ -242,7 +242,7 @@ var restaurants = [
 {
   name: "등촌샤브칼국수 공릉점",
   phone: "02-949-1170",
-  position: new naver.maps.LatLng(37.6258332010362, 127.079643868628),
+  position: new naver.maps.LatLng(37.625814, 127.079667),
   menu: [
       { name: "얼큰버섯칼국수", price: "10,000원"},
       { name: "맑은버섯칼국수", price: "10,000원"},
@@ -253,7 +253,7 @@ var restaurants = [
 {
   name: "알러이",
   phone: "02-977-3011",
-  position: new naver.maps.LatLng(37.6260300577454, 127.078717219581),
+  position: new naver.maps.LatLng(37.625985, 127.078673),
   menu: [
       { name: "사천포크", price: "15,800원"},
       { name: "스파이시 포크", price: "15,800원"},
@@ -264,7 +264,7 @@ var restaurants = [
 {
   name: "일상다반",
   phone: "02-971-0666",
-  position: new naver.maps.LatLng(37.6261643728003, 127.076837018789),
+  position: new naver.maps.LatLng(37.626146, 127.076858),
   menu: [
       { name: "가츠동", price: "11,000원"},
       { name: "에비동", price: "11,000원"},
@@ -275,7 +275,7 @@ var restaurants = [
 {
   name: "원조이모네연탄불곱창",
   phone: "02-973-4658",
-  position: new naver.maps.LatLng(37.6265202574678, 127.075589368289),
+  position: new naver.maps.LatLng(37.6265437, 127.0756482),
   menu: [
       { name: "소금구이(1인분)", price: "18,000원"},
       { name: "소주", price: "5,000원"},
@@ -297,7 +297,7 @@ var restaurants = [
 {
   name: "신미방마라탕 공릉점",
   phone: "0507-1428-3346",
-  position: new naver.maps.LatLng(37.6258423938228, 127.075388063003),
+  position: new naver.maps.LatLng(37.625864, 127.075373),
   menu: [
       { name: "마라탕", price: "9,900원"},
       { name: "마라향궈", price: "16,000원"},
@@ -308,7 +308,7 @@ var restaurants = [
 {
   name: "시작이밤이다",
   phone: "010-7148-3119",
-  position: new naver.maps.LatLng(37.6258354833379, 127.074921115998),
+  position: new naver.maps.LatLng(37.625849, 127.074941),
   menu: [
       { name: "크림새우닭", price: "20,000원"},
       { name: "바지락홍합스튜", price: "17,000원"},
@@ -319,7 +319,7 @@ var restaurants = [
 {
   name: "아소코",
   phone: "02-6052-1003",
-  position: new naver.maps.LatLng(37.6246220380316, 127.07659935959),
+  position: new naver.maps.LatLng(37.624606, 127.076603),
   menu: [
       { name: "하와이안롤카츠", price: "13,000원"},
       { name: "냉우동세트", price: "11,000원"},
@@ -331,7 +331,7 @@ var restaurants = [
 {
   name: "인차이나",
   phone: "02-971-4009",
-  position: new naver.maps.LatLng(37.624914896076, 127.079538899122),
+  position: new naver.maps.LatLng(37.624887, 127.079586),
   menu: [
       { name: "짜장면", price: "6,000원"},
       { name: "짬뽕", price: "7,000원"},
@@ -342,7 +342,7 @@ var restaurants = [
 {
   name: "비스트로 무크",
   phone: "070-8111-3257",
-  position: new naver.maps.LatLng(37.6244697971237, 127.076002002312),
+  position: new naver.maps.LatLng(37.624451, 127.076071),
   menu: [
       { name: "모듬사시미", price: "40,000원"},
       { name: "가지고기튀김", price: "16,000원"},
@@ -353,7 +353,7 @@ var restaurants = [
 {
   name: "오대양횟집",
   phone: "02-979-6936",
-  position: new naver.maps.LatLng(37.6226903684383, 127.076249282854),
+  position: new naver.maps.LatLng(37.622715, 127.076243),
   menu: [
       { name: "광어(소)", price: "25,000원"},
       { name: "우럭(소)", price: "35,000원"},
@@ -364,7 +364,7 @@ var restaurants = [
 {
   name: "닭한마리 공릉본점",
   phone: "02-972-7459",
-  position: new naver.maps.LatLng(37.6212001675462, 127.074791410747),
+  position: new naver.maps.LatLng(37.621232, 127.074691),
   menu: [
       { name: "닭한마리", price: "24,000원"},
       { name: "닭반마리", price: "12,000원"},
@@ -375,7 +375,7 @@ var restaurants = [
 {
   name: "공도",
   phone: "0507-1435-5890",
-  position: new naver.maps.LatLng(37.6210870228953, 127.075468555244),
+  position: new naver.maps.LatLng(37.621087, 127.0754686),
   menu: [
       { name: "등심스테이크덮밥", price: "11,000원"},
       { name: "치킨로제파스타", price: "12,000원"},
@@ -397,7 +397,7 @@ var restaurants = [
 {
   name: "코쿠카츠",
   phone: "02-6014-3225",
-  position: new naver.maps.LatLng(37.6203788280996, 127.078127571843),
+  position: new naver.maps.LatLng(37.620435, 127.078150),
   menu: [
       { name: "로스카츠", price: "9,500원"},
       { name: "순살카츠", price: "9,500원"},
@@ -408,7 +408,7 @@ var restaurants = [
 {
   name: "오늘의파스타",
   phone: "02-977-7764",
-  position: new naver.maps.LatLng(37.6206152778647, 127.078353117374),
+  position: new naver.maps.LatLng(37.620651, 127.078351),
   menu: [
       { name: "봉골레파스타", price: "14,000원"},
       { name: "풍기알리오올리오", price: "12,000원"},
@@ -419,7 +419,7 @@ var restaurants = [
 {
   name: "하노이별 공릉점",
   phone: "02-975-7470",
-  position: new naver.maps.LatLng(37.6220471526384, 127.078585473004),
+  position: new naver.maps.LatLng(37.622047, 127.078595),
   menu: [
       { name: "양지차돌박이쌀국수", price: "8,500원"},
       { name: "홍두깨쌀국수", price: "9,000원"},
@@ -430,7 +430,7 @@ var restaurants = [
 {
   name: "페페그라노",
   phone: "0507-1308-0570",
-  position: new naver.maps.LatLng(37.6220485325467, 127.079618308779),
+  position: new naver.maps.LatLng(37.622048, 127.079627),
   menu: [
       { name: "페페그라노", price: "17,500원"},
       { name: "알리오올리오", price: "16,500원"},
@@ -442,7 +442,7 @@ var restaurants = [
 {
   name: "웨일스",
   phone: "070-4647-0210",
-  position: new naver.maps.LatLng(37.6228292134676, 127.078036457445),
+  position: new naver.maps.LatLng(37.622859, 127.078055),
   menu: [
       { name: "통베이컨크림파스타", price: "20,900원"},
       { name: "항정살갈치속젓파스타", price: "20,900원"},
@@ -453,7 +453,7 @@ var restaurants = [
 {
   name: "차차",
   phone: "0507-1343-9959",
-  position: new naver.maps.LatLng(37.6229189232716, 127.079161377326),
+  position: new naver.maps.LatLng(37.622947, 127.079205),
   menu: [
       { name: "태국소고기쌀국수", price: "12,000원"},
       { name: "팟타이꿍", price: "14,000원"},
@@ -464,7 +464,7 @@ var restaurants = [
 {
   name: "주세프명인",
   phone: "02-948-1395",
-  position: new naver.maps.LatLng(37.6232077604297, 127.080653414947),
+  position: new naver.maps.LatLng(37.623171, 127.080687),
   menu: [
       { name: "옛날짜장", price: "6,000원"},
       { name: "옛날짬뽕", price: "8,000원"},
@@ -475,7 +475,7 @@ var restaurants = [
 {
   name: "솔직하다",
   phone: "0507-1388-4898",
-  position: new naver.maps.LatLng(37.6242595953761, 127.08009088217),
+  position: new naver.maps.LatLng(37.624276, 127.080048),
   menu: [
       { name: "커리누들", price: "9,900원"},
       { name: "연어덮밥", price: "15,500원"},
@@ -486,7 +486,7 @@ var restaurants = [
 {
   name: "퍼스트쿡카츠",
   phone: "0507-1336-4029",
-  position: new naver.maps.LatLng(37.6246506214964, 127.079159475508),
+  position: new naver.maps.LatLng(37.624597, 127.079156),
   menu: [
       { name: "경양식돈까스", price: "10,000원"},
       { name: "핫경양식돈까스", price: "10,000원"},
@@ -497,7 +497,7 @@ var restaurants = [
 {
   name: "경성초밥",
   phone: "02-978-8864",
-  position: new naver.maps.LatLng(37.6210405792882, 127.078163945241),
+  position: new naver.maps.LatLng(37.621024, 127.078205),
   menu: [
       { name: "모둠초밥(11p)", price: "20,000원"},
       { name: "특초밥(11p)", price: "28,000원"},
@@ -508,7 +508,7 @@ var restaurants = [
 {
   name: "스시락2호점",
   phone: "02-6080-0228",
-  position: new naver.maps.LatLng(37.6230811196078, 127.079535585961),
+  position: new naver.maps.LatLng(37.623158, 127.079534),
   menu: [
       { name: "모둠초밥(10p)", price: "12,000원"},
       { name: "특모둠초밥(12p)", price: "16,000원"},
@@ -519,7 +519,7 @@ var restaurants = [
 {
   name: "디에뜨로",
   phone: "0507-1307-9944",
-  position: new naver.maps.LatLng(37.6231213744439, 127.07615038016),
+  position: new naver.maps.LatLng(37.623116, 127.076197),
   menu: [
       { name: "갑오징어오일파스타", price: "23,000원"},
       { name: "문어스테이크먹물리조또", price: "29,000원"},
@@ -530,7 +530,7 @@ var restaurants = [
 {
   name: "태릉양꼬치양갈비",
   phone: "0507-1319-4587",
-  position: new naver.maps.LatLng(37.6201012819381, 127.078054901069),
+  position: new naver.maps.LatLng(37.620105, 127.078063),
   menu: [
       { name: "원조양꼬치", price: "14,000원"},
       { name: "고급양갈비", price: "28,000원"},
@@ -541,7 +541,7 @@ var restaurants = [
 {
   name: "제일콩집",
   phone: "02-972-7016",
-  position: new naver.maps.LatLng(37.6195200512181, 127.077650711047),
+  position: new naver.maps.LatLng(37.619549, 127.077574),
   menu: [
       { name: "진콩국수", price: "12,000원"},
       { name: "청국장", price: "12,000원"},
