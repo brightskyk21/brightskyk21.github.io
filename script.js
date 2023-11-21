@@ -29,14 +29,18 @@ function createMarker(place) {
 
 function openInfoWindow(marker, place) {
     var menuItemsHtml = place.menu.map(function (item) {
-        return '<li>' + item.name + ': ' + item.price + '</li>';
+        return '<div>' + item.name + ': ' + item.price + '</div>';
     }).join('');
 
     var contentString = `
         <div class="info-window-content">
-            <h3>${place.name}</h3>
-            <p>${place.phone}</p>
-            <ul>${menuItemsHtml}</ul>
+            <div class="info-header">
+                <h3>${place.name}</h3>
+                <p>전화번호: ${place.phone}</p>
+            </div>
+            <div class="info-body">
+                ${menuItemsHtml}
+            </div>
         </div>`;
 
     var infoWindow = new naver.maps.InfoWindow({
