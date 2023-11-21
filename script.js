@@ -28,11 +28,9 @@ function createMarker(place) {
 }
 
 function openInfoWindow(marker, place) {
-    // 모달 요소를 찾습니다.
     var modal = document.getElementById('restaurantModal');
     var modalContent = modal.querySelector('.modal-content');
 
-    // 모달 내용을 업데이트합니다.
     modalContent.innerHTML = `
         <div class="info-window-content">
             <h3>${place.name}</h3>
@@ -40,7 +38,6 @@ function openInfoWindow(marker, place) {
             <ul>${place.menu.map(item => `<li>${item.name}: ${item.price}</li>`).join('')}</ul>
         </div>`;
 
-    // 모달을 표시합니다.
     modal.style.display = 'block';
 }
 
