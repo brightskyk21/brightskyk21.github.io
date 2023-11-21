@@ -1,4 +1,5 @@
-html, body {
+html,
+body {
     margin: 0;
     padding: 0;
     height: 100%;
@@ -25,22 +26,62 @@ html, body {
 .modal-content {
     background-color: #fff;
     margin: 5% auto;
-    padding: 20px;
+    padding: 25px;
     border-radius: 10px;
     border: 1px solid #ddd;
-    width: 70%;
-    /* 화면 크기에 따라 % 또는 px 단위로 조정 */
-    max-width: 800px;
-    /* 최대 너비 설정 */
+    width: 80%;
+    max-width: 500px;
     max-height: 80vh;
-    /* 최대 높이 설정 */
     overflow-y: auto;
-    /* 필요시 내부 스크롤 허용 */
+    font-family: 'Arial', sans-serif;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.info-window-content i {
+    margin-right: 5px; /* 아이콘과 텍스트 사이 간격 */
+}
+
+.info-window-content h3 {
+    margin-top: 0;
+    color: #333;
+    font-size: 24px;
+}
+
+.info-window-content p {
+    font-size: 14px;
+    color: #666;
+}
+
+.menu-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.menu-table td {
+    padding: 8px 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.menu-table .price {
+    text-align: right;
+    font-weight: bold;
+}
+
+.menu-table th {
+    border-bottom: 2px solid #ddd;
+    text-align: center;
+    padding: 12px;
+}
+
+/* 메뉴판 아이콘 스타일링 */
+.menu-table .fas.fa-clipboard-list {
+    font-size: 1.5em;
 }
 
 .modal-header h2 {
     color: #333;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 .category {
@@ -50,22 +91,31 @@ html, body {
     /* 희미한 회색으로 설정 */
 }
 
-.modal-body {
-    margin-top: 20px;
+.modal-body th,
+modal-body td {
+    border-bottom: none;
 }
 
 .modal-body table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-    /* 테이블 상단 여백 */
+    margin-top: 0;
+    /* 테이블 상단 여백 제거 */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* 테이블에 그림자 효과 추가 */
+    border-spacing: 0;
+    /* 셀 사이 간격 제거 */
 }
 
-.modal-body th,
 .modal-body td {
-    text-align: left;
-    padding: 10px;
-    border-bottom: 1px solid #ddd;
+    padding: 15px;
+    /* 셀 내부 패딩 조정 */
+    background-color: #f9f9f9;
+    /* 셀 배경색 조정 */
+}
+
+.modal-body .price {
+    text-align: right;
+    font-weight: bold;
+    color: #000;
 }
 
 .close {
@@ -83,21 +133,36 @@ html, body {
 }
 
 #buttonContainer {
-    position: fixed; /* 또는 `fixed`를 사용할 수도 있습니다. */
-    top: 10px; /* 지도 상단에서의 위치 */
-    left: 50%; /* 중앙 정렬을 위해 왼쪽으로부터 50%의 위치에 배치 */
-    transform: translateX(-50%); /* 버튼 컨테이너의 중앙을 왼쪽 50% 위치에 맞춥니다 */
-    z-index: 999; /* 지도 위에 오도록 z-index 설정 */
+    position: fixed;
+    top: 5px;
+    left: 5%;
+    transform: translateX(-50%);
+    z-index: 999;
 }
 
 button {
-    background-color: #4CAF50;
-    color: white;
-    padding: 14px 20px;
-    margin: 0 10px; /* 버튼 사이 간격 */
+    background-color: #4CAF50; /* 버튼 배경색 */
+    color: white; /* 아이콘 색상 */
+    width: 40px; /* 원 모양을 만들기 위한 너비 */
+    height: 40px; /* 원 모양을 만들기 위한 높이 */
     border: none;
-    border-radius: 4px;
+    border-radius: 50%; /* 완전한 원 모양 만들기 */
     cursor: pointer;
+    font-size: 18px; /* 아이콘 크기 조정 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* 버튼 그림자 효과 */
+    transition: background-color 0.3s; /* 호버 효과를 위한 전환 효과 */
+}
+
+button:hover {
+    background-color: rgba(69, 160, 73, 0.8); /* 버튼 호버 색상 */
+}
+
+/* Font Awesome 아이콘에 대한 추가적인 스타일링 */
+button .fas {
+    font-size: 18px;
 }
 
 button:hover {
@@ -105,14 +170,16 @@ button:hover {
 }
 
 /* 추가 스타일 */
-#showRestaurants, #showCafes {
-    width: 150px; /* 버튼 너비 */
-    display: inline-flex; /* 블록 레벨 요소로 변경 */
+#showRestaurants,
+#showCafes {
+    width: 40px;
+    /* 버튼 너비 */
+    display: inline-flex;
+    /* 블록 레벨 요소로 변경 */
     justify-content: center;
     align-items: center;
-    margin: 10px; /* 가운데 정렬 */
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); /* 그림자 효과 */
-    font-size: 13px; /* 글꼴 크기 */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    /* 그림자 효과 */
 }
 
 /* 반응형 디자인을 위한 미디어 쿼리 */
@@ -125,6 +192,7 @@ button:hover {
         padding: 10px 15px;
         /* 모바일 화면에서는 패딩을 조정 */
     }
+
     #map {
         height: 50vh;
     }
