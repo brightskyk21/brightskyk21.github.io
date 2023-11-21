@@ -125,4 +125,7 @@ button:hover {
         padding: 10px 15px;
         /* 모바일 화면에서는 패딩을 조정 */
     }
+    #map {
+        height: 50vh;
+    }
 }
