@@ -28,11 +28,16 @@ function createMarker(place) {
 }
 
 function openInfoWindow(marker, place) {
-    var contentString = '<div class="info-window-content">' +
-                        '<h3>' + place.name + '</h3>' +
-                        '<p>' + place.category + '</p>' +
-                        // Add more place details here
-                        '</div>';
+    var menuItemsHtml = place.menu.map(function (item) {
+        return '<li>' + item.name + ': ' + item.price + '</li>';
+    }).join('');
+
+    var contentString = `
+        <div class="info-window-content">
+            <h3>${place.name}</h3>
+            <p>${place.phone}</p>
+            <ul>${menuItemsHtml}</ul>
+        </div>`;
 
     var infoWindow = new naver.maps.InfoWindow({
         content: contentString
@@ -54,3 +59,14 @@ document.getElementById('showCafes').addEventListener('click', function () {
     showPlaces(cafes); // 'cafes'는 카페 객체 배열입니다.
 });
 
+window.onclick = function (event) {
+    var modal = document.getElementById('restaurantModal');
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
+document.querySelector('.close').onclick = function () {
+    var modal = document.getElementById('restaurantModal');
+    modal.style.display = "none";
+}
