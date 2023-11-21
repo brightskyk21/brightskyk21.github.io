@@ -59,14 +59,10 @@ document.getElementById('showCafes').addEventListener('click', function () {
     showPlaces(cafes); // 'cafes'는 카페 객체 배열입니다.
 });
 
-window.onclick = function (event) {
+window.onclick = function(event) {
     var modal = document.getElementById('restaurantModal');
-    if (event.target == modal) {
+    var modalContent = document.querySelector('.modal-content');
+    if (event.target == modal && event.target != modalContent && !modalContent.contains(event.target)) {
         modal.style.display = "none";
     }
-}
-
-document.querySelector('.close').onclick = function () {
-    var modal = document.getElementById('restaurantModal');
-    modal.style.display = "none";
 }
