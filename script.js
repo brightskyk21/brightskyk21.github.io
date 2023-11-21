@@ -20,34 +20,28 @@ function createMarker(place) {
     };
 
     var marker = new naver.maps.Marker(markerOptions);
-    naver.maps.Event.addListener(marker, 'click', function () {
+
+    // 마커 클릭 이벤트에 openInfoWindow 함수를 연결합니다.
+    naver.maps.Event.addListener(marker, 'click', function() {
         openInfoWindow(marker, place);
     });
-
-    currentMarkers.push(marker);
 }
 
 function openInfoWindow(marker, place) {
-    var menuItemsHtml = place.menu.map(function (item) {
-        return '<div>' + item.name + ': ' + item.price + '</div>';
-    }).join('');
+    // 모달 요소를 찾습니다.
+    var modal = document.getElementById('restaurantModal');
+    var modalContent = modal.querySelector('.modal-content');
 
-    var contentString = `
+    // 모달 내용을 업데이트합니다.
+    modalContent.innerHTML = `
         <div class="info-window-content">
-            <div class="info-header">
-                <h3>${place.name}</h3>
-                <p>전화번호: ${place.phone}</p>
-            </div>
-            <div class="info-body">
-                ${menuItemsHtml}
-            </div>
+            <h3>${place.name}</h3>
+            <p>전화번호: ${place.phone}</p>
+            <ul>${place.menu.map(item => `<li>${item.name}: ${item.price}</li>`).join('')}</ul>
         </div>`;
 
-    var infoWindow = new naver.maps.InfoWindow({
-        content: contentString
-    });
-
-    infoWindow.open(map, marker);
+    // 모달을 표시합니다.
+    modal.style.display = 'block';
 }
 
 function showPlaces(places) {
@@ -65,8 +59,8 @@ document.getElementById('showCafes').addEventListener('click', function () {
 
 window.onclick = function(event) {
     var modal = document.getElementById('restaurantModal');
-    var modalContent = document.querySelector('.modal-content');
-    if (event.target == modal && event.target != modalContent && !modalContent.contains(event.target)) {
+    // 모달이 열려 있고, 클릭된 요소가 모달의 내용이 아니면 모달을 닫습니다.
+    if (modal.style.display == 'block' && !modal.contains(event.target)) {
         modal.style.display = "none";
     }
 }
