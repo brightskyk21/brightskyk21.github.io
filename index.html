@@ -6,15 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>공릉 맛집 지도</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
 </head>
 
 <body>
     <div id="buttonContainer">
-        <button id="showRestaurants">음식점 보기</button>
-        <button id="showCafes">카페 보기</button>
+        <button id="showRestaurants"><i class="fas fa-utensils"></i></button>
+        <button id="showCafes"><i class="fas fa-coffee"></i></button>
     </div>
     <div id="map"></div>
-    <div id="restaurantModal" class="modal">
+    <div id="restaurantModal" class="modal modal-background">
         <div class="modal-content">
             <span class="close">&times;</span>
         </div>
