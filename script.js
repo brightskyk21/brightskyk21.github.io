@@ -26,6 +26,10 @@ function createMarker(place) {
         openInfoWindow(marker, place);
     });
 
+    naver.maps.Event.addListener(marker, 'touchend', function(e) {
+        openInfoWindow(marker, place);
+    });
+
     currentMarkers.push(marker)
 }
 
