@@ -546,6 +546,27 @@ var restaurants = [
             { name: "순두부", price: "12,000원" },
             { name: "손두부", price: "14,000원" }
         ]
+    },
+    {
+        name: "석천숯불갈비",
+        phone: "02-976-0258",
+        position: new naver.maps.LatLng(37.619576, 127.074738),
+        menu: [
+            { name: "이동갈비 4대", price: "39,000원" },
+            { name: "소갈비살 200g", price: "20,000원" },
+            { name: "한방돼지갈비 300g", price: "18,000원" },
+            { name: "생삼겹살 200g", price: "16,000원" }
+        ]
+    },
+    {
+        name: "히딩크의 추억",
+        phone: "02-978-9295",
+        position: new naver.maps.LatLng(37.623647, 127.073944),
+        menu: [
+            { name: "국내산 생 삼겹살", price: "17,000원" },
+            { name: "얼큰 등심순두부", price: "8,000원" },
+            { name: "곱창구이", price: "22,000원" },
+            { name: "냉면", price: "10,000원" }
+        ]
     }
-
 ]
