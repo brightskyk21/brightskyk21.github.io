@@ -46,17 +46,3 @@ button:hover {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     /* 그림자 효과 */
 }
-
-/* 반응형 디자인을 위한 미디어 쿼리 */
-@media (max-width: 768px) {
-
-    button {
-        width: 35px; /* 모바일에서의 버튼 너비 */
-        height: 35px; /* 모바일에서의 버튼 높이 */
-        font-size: 16px; /* 모바일에서의 아이콘 크기 */
-    }
-
-    #map {
-        height: 100vh;
-    }
-}
