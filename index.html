@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="loginStyles.css">
+    <!-- Head 내용 -->
+</head>
+<body>
+    <div id="loginScreen" class="login-screen">
+        <form id="loginForm" class="login-form">
+            <input type="text" id="loginUsername" placeholder="Username">
+            <input type="password" id="loginPassword" placeholder="Password">
+            <button type="submit">Login</button>
+        </form>
+    </div>
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            // 로그인 검증 로직 구현 (예: Firebase 인증)
+            // 이 예제에서는 검증 없이 직접 리디렉션합니다.
+            window.location.href = 'map.html'; // 리디렉션할 페이지 주소
+        });
+    </script>
+</body>
+</html>
