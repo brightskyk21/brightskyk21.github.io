@@ -60,3 +60,38 @@ body {
     color: #333;
     margin-bottom: 20px;
 }
+
+@media screen and (max-width: 600px) {
+    /* 로그인 화면 컨테이너 스타일 조정 */
+    .login-screen {
+        width: 90%;
+        padding: 20px;
+    }
+
+    /* 로그인 폼 입력 필드와 버튼 스타일 조정 */
+    .login-form input[type="text"],
+    .login-form input[type="password"],
+    .login-form button {
+        padding: 10px;
+    }
+
+    /* 플렉스박스 레이아웃 조정 (필요한 경우) */
+    .login-form {
+        flex-direction: column;
+    }
+
+    /* 폰트 크기 조정 */
+    body {
+        font-size: 16px; /* 기본 폰트 크기 */
+    }
+
+    .login-form h2 {
+        font-size: 20px; /* 제목 폰트 크기 */
+    }
+
+    /* 이미지 및 아이콘 크기 조정 (필요한 경우) */
+    .login-logo {
+        width: 150px; /* 로고 크기 */
+        height: auto; /* 높이 자동 조정 */
+    }
+}
