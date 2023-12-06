@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="register.css"> <!-- 여기에 스타일시트 링크 -->
+    <title>Register</title>
+</head>
+<body>
+    <div class="register-screen">
+        <form id="registerForm" class="register-form">
+            <input type="email" id="registerEmail" placeholder="Email">
+            <input type="password" id="registerPassword" placeholder="Password">
+            <button type="submit">Register</button>
+        </form>
+    </div>
+
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+        import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-analytics.js";
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyCgd7e4IrvCHBNUmZgdqloO4Ys-ZP2Rz4U",
+            authDomain: "gongneungfoodieguide.firebaseapp.com",
+            projectId: "gongneungfoodieguide",
+            storageBucket: "gongneungfoodieguide.appspot.com",
+            messagingSenderId: "980582164185",
+            appId: "1:980582164185:web:bab44b5e0689056b81c0c8",
+            measurementId: "G-JKFNL5FF3J"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth(app);
+        const analytics = getAnalytics(app);
+
+        // 회원가입 로직
+        document.getElementById('registerForm').addEventListener('submit', async function(event) {
+            event.preventDefault();
+            const email = document.getElementById('registerEmail').value;
+            const password = document.getElementById('registerPassword').value;
+
+            try {
+                await createUserWithEmailAndPassword(auth, email, password);
+                alert('Registration successful!');
+                window.location.href = 'login.html'; // 회원가입 후 로그인 페이지로 이동
+            } catch (error) {
+                console.error('Registration Failed:', error);
+                alert('Registration failed: ' + error.message);
+            }
+        });
+    </script>
+</body>
+</html>
