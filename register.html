@@ -2,23 +2,24 @@
 <html lang="en">
 
 <head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="register.css"> <!-- 여기에 스타일시트 링크 -->
+    <title>Register</title>
 </head>
 
 <body>
-    <div id="loginScreen" class="login-screen">
-        <form id="loginForm" class="login-form">
-            <input type="text" id="loginUsername" placeholder="Username">
-            <input type="password" id="loginPassword" placeholder="Password">
-            <button type="submit">Login</button>
-            <button onclick="location.href='register.html'" type="button">Register</button>
+    <div class="register-screen">
+        <form id="registerForm" class="register-form">
+            <input type="email" id="registerEmail" placeholder="Email">
+            <input type="password" id="registerPassword" placeholder="Password">
+            <button type="submit">Register</button>
         </form>
     </div>
 
     <script type="module">
         import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
-        import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
+        import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
         import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-analytics.js";
 
         const firebaseConfig = {
@@ -35,30 +36,37 @@
         const auth = getAuth(app);
         const analytics = getAnalytics(app);
 
-        //로그인 기능
-        // 로그인 로직
-        document.getElementById('loginForm').addEventListener('submit', async function (event) {
+        function validatePassword(input) {
+            const passwordHelp = document.getElementById('passwordHelp');
+            if (input.value.length < 6) {
+                passwordHelp.style.display = 'block';
+            } else {
+                passwordHelp.style.display = 'none';
+            }
+        }
+
+        // 회원가입 로직
+        document.getElementById('registerForm').addEventListener('submit', async function (event) {
             event.preventDefault();
-            const email = document.getElementById('loginUsername').value;
-            const password = document.getElementById('loginPassword').value;
+            const email = document.getElementById('registerEmail').value;
+            const password = document.getElementById('registerPassword').value;
+
+            // 비밀번호 길이 검증
+            if (password.length < 6) {
+                alert('비밀번호는 6자 이상이어야 합니다.');
+                return; // 비밀번호 길이가 충분하지 않으면 함수 실행 중단
+            }
 
             try {
-                await signInWithEmailAndPassword(auth, email, password);
-                // 로그인 성공 시, 메인 페이지로 리디렉션
-                window.location.href = 'map.html';
+                // Firebase 회원가입 로직
+                await createUserWithEmailAndPassword(auth, email, password);
+                alert('Registration successful!');
+                window.location.href = 'index.html'; // 회원가입 후 로그인 페이지로 이동
             } catch (error) {
-                // 로그인 실패 시 오류 메시지 처리
-                if (error.code === 'auth/wrong-password') {
-                    alert("잘못된 비밀번호입니다. 다시 시도해주세요.");
-                } else if (error.code === 'auth/user-not-found') {
-                    alert("계정이 존재하지 않습니다. 회원가입을 진행해주세요.");
-                } else {
-                    alert("로그인 실패: " + error.message);
-                }
-                console.error("Login Failed:", error);
+                console.error('Registration Failed:', error);
+                alert('Registration failed: ' + error.message);
             }
         });
-
     </script>
 </body>
 
