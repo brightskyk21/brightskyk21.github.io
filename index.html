@@ -1,24 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <link rel="stylesheet" href="loginStyles.css">
-    <!-- Head 내용 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login.css">
 </head>
+
 <body>
     <div id="loginScreen" class="login-screen">
         <form id="loginForm" class="login-form">
             <input type="text" id="loginUsername" placeholder="Username">
             <input type="password" id="loginPassword" placeholder="Password">
             <button type="submit">Login</button>
+            <button onclick="location.href='register.html'" type="button">Register</button>
         </form>
     </div>
-    <script>
-        document.getElementById('loginForm').addEventListener('submit', function(event) {
+
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+        import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-analytics.js";
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyCgd7e4IrvCHBNUmZgdqloO4Ys-ZP2Rz4U",
+            authDomain: "gongneungfoodieguide.firebaseapp.com",
+            projectId: "gongneungfoodieguide",
+            storageBucket: "gongneungfoodieguide.appspot.com",
+            messagingSenderId: "980582164185",
+            appId: "1:980582164185:web:bab44b5e0689056b81c0c8",
+            measurementId: "G-JKFNL5FF3J"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth(app);
+        const analytics = getAnalytics(app);
+
+        //로그인 기능
+        // 로그인 로직
+        document.getElementById('loginForm').addEventListener('submit', async function (event) {
             event.preventDefault();
-            // 로그인 검증 로직 구현 (예: Firebase 인증)
-            // 이 예제에서는 검증 없이 직접 리디렉션합니다.
-            window.location.href = 'map.html'; // 리디렉션할 페이지 주소
+            const email = document.getElementById('loginEmail').value;
+            const password = document.getElementById('loginPassword').value;
+
+            try {
+                await firebase.auth().signInWithEmailAndPassword(email, password);
+                // 로그인 성공 시, 메인 페이지로 리디렉션
+                window.location.href = 'map.html'; 
+            } catch (error) {
+                // 로그인 실패 시 오류 메시지 표시
+                console.error("Login Failed:", error);
+                alert("Login failed: " + error.message);
+            }
         });
+
     </script>
 </body>
+
 </html>
