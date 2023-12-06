@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="register.css"> <!-- 여기에 스타일시트 링크 -->
     <title>Register</title>
 </head>
+
 <body>
     <div class="register-screen">
         <form id="registerForm" class="register-form">
@@ -17,7 +19,7 @@
 
     <script type="module">
         import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
-        import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
+        import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
         import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-analytics.js";
 
         const firebaseConfig = {
@@ -35,7 +37,7 @@
         const analytics = getAnalytics(app);
 
         // 회원가입 로직
-        document.getElementById('registerForm').addEventListener('submit', async function(event) {
+        document.getElementById('registerForm').addEventListener('submit', async function (event) {
             event.preventDefault();
             const email = document.getElementById('registerEmail').value;
             const password = document.getElementById('registerPassword').value;
@@ -51,4 +53,5 @@
         });
     </script>
 </body>
+
 </html>
