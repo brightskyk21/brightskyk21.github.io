@@ -47,9 +47,15 @@
                 // 로그인 성공 시, 메인 페이지로 리디렉션
                 window.location.href = 'map.html';
             } catch (error) {
-                // 로그인 실패 시 오류 메시지 표시
+                // 로그인 실패 시 오류 메시지 처리
+                if (error.code === 'auth/wrong-password') {
+                    alert("잘못된 비밀번호입니다. 다시 시도해주세요.");
+                } else if (error.code === 'auth/user-not-found') {
+                    alert("계정이 존재하지 않습니다. 회원가입을 진행해주세요.");
+                } else {
+                    alert("로그인 실패: " + error.message);
+                }
                 console.error("Login Failed:", error);
-                alert("Login failed: " + error.message);
             }
         });
 
