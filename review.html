@@ -1,4 +1,3 @@
-<!-- review.html -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,12 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>리뷰 페이지</title>
-    <!-- Firebase 초기화 스크립트 포함 -->
     <script type="module">
         import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
         import { getFirestore } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
 
-        // Firebase 초기화 코드
         var firebaseConfig = {
             apiKey: "AIzaSyCgd7e4IrvCHBNUmZgdqloO4Ys-ZP2Rz4U",
             authDomain: "gongneungfoodieguide.firebaseapp.com",
@@ -25,24 +22,45 @@
         const app = initializeApp(firebaseConfig);
         const db = getFirestore(app);
     </script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css">
+    <link rel="stylesheet" type="text/css" href="review.css">
 </head>
 
 <body>
-    <!-- 리뷰 정보 표시 -->
     <h1>리뷰 페이지</h1>
     <div id="reviews">
-        <!-- 리뷰 내용을 여기에 표시 -->
     </div>
-
-    <!-- 리뷰 작성 폼 -->
+    <p><strong>평균 별점:</strong> <span id="averageRating">0.00</span></p>
     <h2>리뷰 작성</h2>
     <form id="reviewForm">
-        <textarea id="reviewText" placeholder="리뷰 내용"></textarea>
-        <input type="number" id="reviewRating" placeholder="별점 (1-5)" required>
+        <div class="star-rating">
+            <i class="far fa-star" data-rating="1"></i>
+            <i class="far fa-star" data-rating="2"></i>
+            <i class="far fa-star" data-rating="3"></i>
+            <i class="far fa-star" data-rating="4"></i>
+            <i class="far fa-star" data-rating="5"></i>
+            <input type="hidden" name="rating" id="rating">
+          </div>
+        <div>
+            <input type="checkbox" id="goodTaste" name="taste" value="good">
+            <label for="goodTaste">맛있다</label>
+        </div>
+        <div>
+            <input type="checkbox" id="goodMood" name="mood" value="good">
+            <label for="goodMood">분위기가 좋다</label>
+        </div>
+        <div>
+            <input type="checkbox" id="goodValue" name="value" value="good">
+            <label for="goodValue">가성비가 좋다</label>
+        </div>
+        <div>
+            <input type="checkbox" id="goodService" name="kindness" value="good">
+            <label for="goodService">친절하다</label>
+        </div>
+        <textarea id="reviewText" placeholder="리뷰를 작성해 주세요"></textarea>
         <button type="submit">리뷰 제출</button>
     </form>
 
-    <!-- 리뷰 작성 스크립트 파일 포함 -->
     <script type="module" src="review.js"></script>
 </body>
 
