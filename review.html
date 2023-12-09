@@ -1,0 +1,49 @@
+<!-- review.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>리뷰 페이지</title>
+    <!-- Firebase 초기화 스크립트 포함 -->
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+        import { getFirestore } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
+
+        // Firebase 초기화 코드
+        var firebaseConfig = {
+            apiKey: "AIzaSyCgd7e4IrvCHBNUmZgdqloO4Ys-ZP2Rz4U",
+            authDomain: "gongneungfoodieguide.firebaseapp.com",
+            projectId: "gongneungfoodieguide",
+            storageBucket: "gongneungfoodieguide.appspot.com",
+            messagingSenderId: "980582164185",
+            appId: "1:980582164185:web:bab44b5e0689056b81c0c8",
+            measurementId: "G-JKFNL5FF3J"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const db = getFirestore(app);
+    </script>
+</head>
+
+<body>
+    <!-- 리뷰 정보 표시 -->
+    <h1>리뷰 페이지</h1>
+    <div id="reviews">
+        <!-- 리뷰 내용을 여기에 표시 -->
+    </div>
+
+    <!-- 리뷰 작성 폼 -->
+    <h2>리뷰 작성</h2>
+    <form id="reviewForm">
+        <textarea id="reviewText" placeholder="리뷰 내용"></textarea>
+        <input type="number" id="reviewRating" placeholder="별점 (1-5)" required>
+        <button type="submit">리뷰 제출</button>
+    </form>
+
+    <!-- 리뷰 작성 스크립트 파일 포함 -->
+    <script type="module" src="review.js"></script>
+</body>
+
+</html>
