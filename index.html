@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="login.css">
 </head>
@@ -11,8 +12,8 @@
         <form id="loginForm" class="login-form">
             <input type="text" id="loginUsername" placeholder="Username">
             <input type="password" id="loginPassword" placeholder="Password">
-            <button type="submit">Login</button>
-            <button onclick="location.href='register.html'" type="button">Register</button>
+            <button type="submit">로그인</button>
+            <button onclick="location.href='register.html'" type="button">회원가입</button>
         </form>
     </div>
 
@@ -34,9 +35,7 @@
         const app = initializeApp(firebaseConfig);
         const auth = getAuth(app);
         const analytics = getAnalytics(app);
-
-        //로그인 기능
-        // 로그인 로직
+        
         document.getElementById('loginForm').addEventListener('submit', async function (event) {
             event.preventDefault();
             const email = document.getElementById('loginUsername').value;
@@ -44,9 +43,8 @@
 
             try {
                 await signInWithEmailAndPassword(auth, email, password);
-                window.location.href = 'map.html'; // 로그인 성공 시 리디렉션
+                window.location.href = 'map.html'; 
             } catch (error) {
-                // 로그인 실패 시 오류 메시지 처리
                 if (error.code === 'auth/wrong-password') {
                     alert("잘못된 비밀번호입니다. 다시 시도해주세요.");
                 } else if (error.code === 'auth/user-not-found') {
