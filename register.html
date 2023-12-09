@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="register.css"> <!-- 여기에 스타일시트 링크 -->
+    <link rel="stylesheet" href="register.css">
     <title>Register</title>
 </head>
 
@@ -45,23 +45,20 @@
             }
         }
 
-        // 회원가입 로직
         document.getElementById('registerForm').addEventListener('submit', async function (event) {
             event.preventDefault();
             const email = document.getElementById('registerEmail').value;
             const password = document.getElementById('registerPassword').value;
 
-            // 비밀번호 길이 검증
             if (password.length < 6) {
                 alert('비밀번호는 6자 이상이어야 합니다.');
-                return; // 비밀번호 길이가 충분하지 않으면 함수 실행 중단
+                return; 
             }
 
             try {
-                // Firebase 회원가입 로직
                 await createUserWithEmailAndPassword(auth, email, password);
                 alert('Registration successful!');
-                window.location.href = 'index.html'; // 회원가입 후 로그인 페이지로 이동
+                window.location.href = 'index.html';
             } catch (error) {
                 console.error('Registration Failed:', error);
                 alert('Registration failed: ' + error.message);
