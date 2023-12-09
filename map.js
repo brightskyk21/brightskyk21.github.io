@@ -69,8 +69,7 @@ function openInfoWindow(marker, place) {
     });
 
     modal.style.display = 'block';
-
-
+    
 }
 
 function showPlaces(places) {
