@@ -61,7 +61,16 @@ function openInfoWindow(marker, place) {
             ${menuTableHtml}
         </div>`;
 
+    var reviewButtonHtml = '<button id="writeReviewBtn">리뷰</button>';
+    modalContent.innerHTML += reviewButtonHtml;
+
+    document.getElementById('writeReviewBtn').addEventListener('click', function () {
+        openReviewWindow(place.id);
+    });
+
     modal.style.display = 'block';
+
+
 }
 
 function showPlaces(places) {
@@ -76,6 +85,11 @@ document.getElementById('showRestaurants').addEventListener('click', function ()
 document.getElementById('showCafes').addEventListener('click', function () {
     showPlaces(cafes);
 });
+
+
+function openReviewWindow(placeId) {
+    window.open('review.html?placeId=' + placeId, '_blank');
+}
 
 window.onclick = function (event) {
     var modal = document.getElementById('restaurantModal');
