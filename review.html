@@ -24,42 +24,42 @@
     </script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css">
     <link rel="stylesheet" type="text/css" href="review.css">
+    <script src="places.js"></script>
 </head>
 
 <body>
-    <h1>리뷰 페이지</h1>
+    <div class="header">
+        <h1 id="placesName">리뷰 페이지</h1>
+        <p class="average-rating">
+            <i class="fas fa-star"></i>
+            <span id="averageRating">0.00</span></p>
+    </div>
     <div id="reviews">
     </div>
-    <p><strong>평균 별점:</strong> <span id="averageRating">0.00</span></p>
-    <h2>리뷰 작성</h2>
-    <form id="reviewForm">
-        <div class="star-rating">
-            <i class="far fa-star" data-rating="1"></i>
-            <i class="far fa-star" data-rating="2"></i>
-            <i class="far fa-star" data-rating="3"></i>
-            <i class="far fa-star" data-rating="4"></i>
-            <i class="far fa-star" data-rating="5"></i>
+    <button id="toggleReviewFormButton">리뷰 작성</button>
+    <div id="reviewFormContainer" class="hidden">
+        <form id="reviewForm">
+            <div class="star-rating">
+                <i class="far fa-star" data-rating="1"></i>
+                <i class="far fa-star" data-rating="2"></i>
+                <i class="far fa-star" data-rating="3"></i>
+                <i class="far fa-star" data-rating="4"></i>
+                <i class="far fa-star" data-rating="5"></i>
+            </div>
             <input type="hidden" name="rating" id="rating">
-          </div>
-        <div>
-            <input type="checkbox" id="goodTaste" name="taste" value="good">
-            <label for="goodTaste">맛있다</label>
-        </div>
-        <div>
-            <input type="checkbox" id="goodMood" name="mood" value="good">
-            <label for="goodMood">분위기가 좋다</label>
-        </div>
-        <div>
-            <input type="checkbox" id="goodValue" name="value" value="good">
-            <label for="goodValue">가성비가 좋다</label>
-        </div>
-        <div>
-            <input type="checkbox" id="goodService" name="kindness" value="good">
-            <label for="goodService">친절하다</label>
-        </div>
-        <textarea id="reviewText" placeholder="리뷰를 작성해 주세요"></textarea>
-        <button type="submit">리뷰 제출</button>
-    </form>
+
+            <div class="rating-buttons">
+                <button type="button" class="rating-button taste">맛</button>
+                <button type="button" class="rating-button mood">분위기</button>
+                <button type="button" class="rating-button value">가성비</button>
+                <button type="button" class="rating-button kindness">친절</button>
+            </div>
+
+            <textarea id="reviewText" placeholder="리뷰를 작성해 주세요"></textarea>
+            <button type="submit">리뷰 제출</button>
+        </form>
+    </div>
+
 
     <script type="module" src="review.js"></script>
 </body>
