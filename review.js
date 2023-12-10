@@ -136,7 +136,7 @@ function updateStars(selectedRating) {
 }
 
 async function updateRatingStats(placeId, rating) {
-  const placeRef = doc(db, 'places', placeId);이름
+  const placeRef = doc(db, 'places', placeId);
 
   try {
     await updateDoc(placeRef, {
