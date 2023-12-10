@@ -61,12 +61,17 @@ window.onload = async function () {
         reviewText: reviewTextValue
       };
 
-      await addReview(placeId, reviewData);
-
-      console.log('리뷰가 성공적으로 작성되었습니다.');
+      try {
+        await addReview(placeId, reviewData);
+        alert('리뷰가 성공적으로 작성되었습니다.');
+        location.reload(); // 페이지 새로고침
+      } catch (error) {
+        alert('리뷰 작성 중 오류가 발생했습니다. 다시 시도해주세요.');
+        console.error(error);
+      }
 
     } else {
-      console.error('리뷰 작성을 위해서는 로그인이 필요합니다.');
+      alert('리뷰 작성을 위해서는 로그인이 필요합니다.');
     }
   });
 
