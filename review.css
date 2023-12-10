@@ -1,3 +1,13 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.review-button-position {
+    margin-top: 20px; /* 원하는 값으로 조정 */
+}
+
 body {
     font-family: Arial, sans-serif;
     background-color: #eceff1;
@@ -6,6 +16,21 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.average-rating {
+    display: flex;
+    align-items: center;
+}
+
+.average-rating .fas {
+    color: #ffc107; /* 별의 색상 */
+    font-size: 24px; /* 별의 크기 */
+}
+
+.average-rating #averageRating {
+    font-size: 20px; /* 평점 숫자의 크기 */
+    margin-left: 5px; /* 별과 평점 숫자 사이의 간격 */
 }
 
 h1, h2 {
@@ -23,6 +48,11 @@ h1, h2 {
     flex-direction: column;
     align-items: center;
 }
+
+#reviewText {
+    text-align: center;
+}
+
 
 textarea, input[type="number"] {
     width: 100%;
@@ -55,4 +85,36 @@ button:hover {
   }
   .star-rating .fa-star.checked {
     color: #ffc107; 
+  }
+
+  .rating-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.rating-button {
+    padding: 10px;
+    background-color: #ccc;
+    border: none;
+    cursor: pointer;
+}
+
+.rating-button.selected {
+    background-color: #007bff;
+    color: white;
+}
+
+.hidden {
+    display: none;
+  }
+  
+  /* 슬라이드 효과 애니메이션 설정 */
+  #reviewFormContainer {
+    position: fixed;
+    bottom: -100%; /* 폼이 화면 아래에 숨겨져 있음 */
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    transition: bottom 0.3s ease-in-out; /* 애니메이션 지속 시간 및 이징 함수 설정 */
+    z-index: 1; /* 다른 요소 위에 레이어 설정 */
   }
