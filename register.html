@@ -11,15 +11,17 @@
 <body>
     <div class="register-screen">
         <form id="registerForm" class="register-form">
-            <input type="email" id="registerEmail" placeholder="Email">
-            <input type="password" id="registerPassword" placeholder="Password">
-            <button type="submit">Register</button>
+            <input type="email" id="registerEmail" placeholder="이메일">
+            <input type="password" id="registerPassword" placeholder="비밀번호">
+            <input type="text" id="registerNickname" placeholder="닉네임">
+            <button type="submit">가입하기</button>
         </form>
     </div>
 
     <script type="module">
         import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
         import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
+        import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-database.js";
         import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-analytics.js";
 
         const firebaseConfig = {
@@ -34,29 +36,38 @@
 
         const app = initializeApp(firebaseConfig);
         const auth = getAuth(app);
-        const analytics = getAnalytics(app);
+        const database = getDatabase(app);
 
-        function validatePassword(input) {
-            const passwordHelp = document.getElementById('passwordHelp');
-            if (input.value.length < 6) {
-                passwordHelp.style.display = 'block';
-            } else {
-                passwordHelp.style.display = 'none';
-            }
-        }
-
+        // 사용자 등록 폼에서 submit 이벤트 리스너 설정
         document.getElementById('registerForm').addEventListener('submit', async function (event) {
             event.preventDefault();
+
+            // 사용자 입력 가져오기
             const email = document.getElementById('registerEmail').value;
             const password = document.getElementById('registerPassword').value;
+            const nickname = document.getElementById('registerNickname').value;
 
+            // 비밀번호 유효성 검사
             if (password.length < 6) {
                 alert('비밀번호는 6자 이상이어야 합니다.');
-                return; 
+                return;
             }
 
             try {
-                await createUserWithEmailAndPassword(auth, email, password);
+                // Firebase 인증을 사용하여 사용자 등록
+                const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+
+                // 등록한 사용자의 UID 가져오기
+                const user = userCredential.user;
+                const uid = user.uid;
+
+                // 사용자 데이터 Firebase Realtime Database에 저장
+                const userRef = ref(database, 'users/' + uid);
+                await set(userRef, {
+                    email: email,
+                    nickname: nickname
+                });
+
                 alert('Registration successful!');
                 window.location.href = 'index.html';
             } catch (error) {
