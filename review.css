@@ -1,39 +1,59 @@
 .header {
+    font-family: 'Nanum Gothic', sans-serif;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-}
+  }
+  
+  #placesName {
+    font-family: 'Nanum Gothic', sans-serif;
+    position: relative;
+    top: -30px;
+  }
+  
+  .average-rating {
+    font-family: 'Nanum Gothic', sans-serif;
+    font-weight: bold;
+    position: relative;
+    top: -30px;
+    margin-left: 10px; /* 수정: 필요에 따라 마진을 조정하여 간격을 설정할 수 있습니다. */
+  }
+  
 
 .review-button-position {
-    margin-top: 20px; /* 원하는 값으로 조정 */
+    font-family: 'Nanum Gothic', sans-serif;
+    position: absolute;
+    font-size: 14px;
+    padding: 1px 1px;
+    top: 3px;
+    right: 20px;
+    background-color: transparent;
+    color: blue;
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Nanum Gothic', sans-serif;
     background-color: #eceff1;
-    margin: 0;
-    padding: 0;
+    margin: 20px;
+    padding: 1px 1px;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
 }
 
-.average-rating {
-    display: flex;
-    align-items: center;
-}
 
 .average-rating .fas {
-    color: #ffc107; /* 별의 색상 */
-    font-size: 24px; /* 별의 크기 */
+    color: #ec0a0a;
+    font-size: 15px;
+    margin-left: 10px;
 }
 
 .average-rating #averageRating {
-    font-size: 20px; /* 평점 숫자의 크기 */
-    margin-left: 5px; /* 별과 평점 숫자 사이의 간격 */
+    font-size: 15px;
+    margin-left: 5px;
 }
 
-h1, h2 {
+h1,
+h2 {
     margin-top: 20px;
     font-size: 24px;
 }
@@ -54,7 +74,8 @@ h1, h2 {
 }
 
 
-textarea, input[type="number"] {
+textarea,
+input[type="number"] {
     width: 100%;
     padding: 10px;
     margin: 5px 0;
@@ -64,38 +85,40 @@ textarea, input[type="number"] {
 }
 
 button {
+
     padding: 10px 20px;
     background-color: #1ec800;
     color: white;
     border: none;
     border-radius: 5px;
     font-size: 16px;
+    font-weight: bold;
     cursor: pointer;
     transition: background-color 0.3s;
     margin-top: 10px;
 }
 
-button:hover {
-    background-color: #16a600;
+.star-rating .fa-regular.fa-star {
+    color: #8f8d8d;
+    font-size: 25px;
+    margin-right: -5px;
+    cursor: pointer;
 }
 
-.star-rating .fa-star {
-    color: #8f8d8d;
+.star-rating .fa-solid.fa-star {
+    color: #f10f0f;
+    font-size: 25px;
+    margin-right: -5px;
     cursor: pointer;
-  }
-  .star-rating .fa-star.checked {
-    color: #ffc107; 
-  }
-
-  .rating-buttons {
-    display: flex;
-    gap: 10px;
 }
 
 .rating-button {
-    padding: 10px;
+    font-family: 'Nanum Gothic', sans-serif;
+    font-weight: bold;
+    padding: 5px 10px;
+    height: auto;
     background-color: #ccc;
-    border: none;
+    border: 1px;
     cursor: pointer;
 }
 
@@ -105,16 +128,42 @@ button:hover {
 }
 
 .hidden {
-    display: none;
-  }
-  
-  /* 슬라이드 효과 애니메이션 설정 */
-  #reviewFormContainer {
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(100%);
+    transition: visibility 0s linear 0.3s, opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+#reviewFormContainer {
     position: fixed;
-    bottom: -100%; /* 폼이 화면 아래에 숨겨져 있음 */
+    bottom: 0;
     left: 0;
     width: 100%;
     background-color: #fff;
-    transition: bottom 0.3s ease-in-out; /* 애니메이션 지속 시간 및 이징 함수 설정 */
-    z-index: 1; /* 다른 요소 위에 레이어 설정 */
-  }
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    z-index: 1;
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#reviewFormContainer.hidden {
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(100%);
+    transition: visibility 0s linear 0.3s, opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+#submitReviewButton {
+    font-family: 'Nanum Gothic', sans-serif;
+    position: relative;
+    bottom: 7px;
+}
+
+#submitReviewButton:hover {
+    background-color: #16a600;
+}
+
+#reviewText {
+    font-family: 'Nanum Gothic', sans-serif;
+}
