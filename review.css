@@ -2,22 +2,22 @@
     font-family: 'Nanum Gothic', sans-serif;
     display: flex;
     align-items: center;
-  }
-  
-  #placesName {
+}
+
+#placesName {
     font-family: 'Nanum Gothic', sans-serif;
     position: relative;
     top: -30px;
-  }
-  
-  .average-rating {
+}
+
+.average-rating {
     font-family: 'Nanum Gothic', sans-serif;
     font-weight: bold;
     position: relative;
     top: -30px;
-    margin-left: 10px; /* 수정: 필요에 따라 마진을 조정하여 간격을 설정할 수 있습니다. */
-  }
-  
+    margin-left: 10px;
+}
+
 
 .review-button-position {
     font-family: 'Nanum Gothic', sans-serif;
@@ -166,4 +166,76 @@ button {
 
 #reviewText {
     font-family: 'Nanum Gothic', sans-serif;
+}
+
+.red-stars {
+    color: red;
+}
+
+#reviews {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.review-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.review-item:last-child {
+    border-bottom: none;
+}
+
+.bubble {
+    position: relative;
+    background: #9cceeb;
+    border-radius: 15px;
+    padding: 10px 15px;
+    margin: 10px 0;
+    display: inline-block;
+}
+
+.bubble::before {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 25px;
+    transform: translateX(-50%) translateY(-100%);
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent #9cceeb transparent;
+}
+
+.date-text {
+    font-size: 0.8em;
+    font-weight: normal;
+}
+
+.review-content {
+    flex-grow: 1;
+}
+
+.delete-button-container {
+    margin-left: auto;
+    padding: 0px;
+}
+
+.delete-button {
+    margin-left: auto;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 0.5em;
+    font-size: 0.5em;
+    cursor: pointer;
+}
+
+.delete-button:hover {
+    background-color: darkred;
 }
