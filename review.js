@@ -86,12 +86,6 @@ window.onload = async function () {
     });
   });
   
-  checkboxes.forEach((checkbox) => {
-    checkbox.addEventListener('change', () => {
-      // checkbox 상태에 따라 처리할 내용 추가
-    });
-  });
-  
   reviewForm.addEventListener('submit', async (event) => {
     event.preventDefault();
     const user = auth.currentUser;
@@ -156,9 +150,11 @@ window.onload = async function () {
         querySnapshot.forEach((doc) => {
           const reviewData = doc.data();
           const rating = parseFloat(reviewData.rating);
+          const userId = reviewData.userId;
           const reviewElement = document.createElement('div');
           reviewElement.innerHTML = `
             <p><strong>별점:</strong> ${rating}</p>
+            <p>${userId}</p>
             <p><strong>리뷰 내용:</strong> ${reviewData.reviewText}</p>
           `;
           reviewsContainer.appendChild(reviewElement);
@@ -170,7 +166,7 @@ window.onload = async function () {
         if (reviewCount > 0) {
           const averageRating = totalRating / reviewCount;
           const averageRatingElement = document.getElementById('averageRating');
-          averageRatingElement.textContent = averageRating.toFixed(1);
+          averageRatingElement.textContent = averageRating.toFixed(2);
         }
       } catch (error) {
         console.error('리뷰 정보를 불러오는 중 오류 발생:', error);
@@ -196,11 +192,11 @@ function updateStars(selectedRating) {
 
   starIcons.forEach((star, index) => {
     if (index < selectedRating) {
-      star.classList.add('fas');
-      star.classList.remove('far');
+      star.classList.add('fa-solid');
+      star.classList.remove('fa-regular');
     } else {
-      star.classList.remove('fas');
-      star.classList.add('far');
+      star.classList.remove('fa-solid');
+      star.classList.add('fa-regular');
     }
   });
 }
