@@ -113,77 +113,77 @@ var cafes = [
         phone: "02-6449-8250",
         position: new naver.maps.LatLng(37.6288763669285, 127.076382140937),
         menu: [
-            { name: "(아이스)아메리카노", price: "3,800원"},
-            { name: "(아이스)바닐라라떼", price: "4,300원"},
-            { name: "우유생크림도넛", price: "3,800원"},
-            { name: "블루베리크림도넛", price: "3,800원"}
+            { name: "글레이즈 도넛", price: "2,800원"},
+            { name: "우유 크림 도넛", price: "3,800원"},
+            { name: "파인콘", price: "3,500원"},
+            { name: "베어클라우", price: "3,800원"}
         ]
     },
     {
         id: "cafe11",
         name: "미라쥬양과점",
         phone: "010-2006-9433",
-        position: new naver.maps.LatLng(37.6280382886101, 127.072934411975),
+        position: new naver.maps.LatLng(37.624530, 127.077463),
         menu: [
-            { name: "아메리카노", price: "3,800원"},
-            { name: "카페라떼", price: "4,000원"},
-            { name: "바닐라라떼", price: "4,200원"},
-            { name: "말차라떼", price: "4,800원"}
+            { name: "마들렌", price: "변동"},
+            { name: "휘낭시에", price: "변동"},
+            { name: "마카롱", price: "변동"},
+            { name: "8구 선물세트", price: "24,000원"}
         ]
     },
     {
         id: "cafe12",
         name: "파운드그레도",
         phone: "02-979-1102",
-        position: new naver.maps.LatLng(37.6282972718194, 127.071989425807),
+        position: new naver.maps.LatLng(37.628287, 127.071991),
         menu: [
-            { name: "아메리카노", price: "4,000원"},
-            { name: "카페라떼", price: "4,500원"},
-            { name: "대만흑탕커피", price: "4,800원"},
-            { name: "스페인치즈케이크", price: "6,500원"}
+            { name: "그레도 앙버터", price: "4,200원"},
+            { name: "고메버터 프레첼", price: "3,900원"},
+            { name: "에그 솔트 타르트", price: "4,600원"},
+            { name: "씹히는 블루베리 스무디", price: "5,900원"}
         ]
     },
     {
         id: "cafe13",
         name: "마카모예 브레드바",
         phone: "02-6449-2228",
-        position: new naver.maps.LatLng(37.6264736111328, 127.076390330546),
+        position: new naver.maps.LatLng(37.626477, 127.076411),
         menu: [
-            { name: "아메리카노", price: "4,000원"},
-            { name: "옥수수라떼", price: "6,000원"},
+            { name: "잠봉뵈르샌드위치", price: "8,000원"},
+            { name: "대파베이글", price: "6,000원"},
             { name: "초당순두부크림치즈샌드위치", price: "8,000원"},
-            { name: "봐질와사비김빵", price: "7,000원"}
+            { name: "바질와사비김빵", price: "7,000원"}
         ]
     },
     {
         id: "cafe14",
         name: "온고이",
         phone: "0507-1394-2449",
-        position: new naver.maps.LatLng(37.6253612861643, 127.077032278501),
+        position: new naver.maps.LatLng(37.625347, 127.077034),
         menu: [
-            { name: "아메리카노", price: "3,800원"},
-            { name: "카페라떼", price: "4,300원"},
+            { name: "딸기우유생크림케이크", price: "변동"},
+            { name: "라즈베리쇼콜라", price: "7,500원"},
             { name: "쑥갸또크럼블", price: "7,300원"},
-            { name: "딥초코바나나", price: "8,500원"}
+            { name: "딥초코바나나", price: "변동"}
         ]
     },
     {
         id: "cafe15",
         name: "오피셜커피",
         phone: "010-9077-1177",
-        position: new naver.maps.LatLng(37.6249797260476, 127.077295937322),
+        position: new naver.maps.LatLng(37.624939, 127.077334),
         menu: [
             { name: "아메리카노", price: "4,800원"},
-            { name: "카페라떼", price: "5,000원"},
-            { name: "초콜릿라떼", price: "5,000원"},
-            { name: "딸기라떼", price: "6,500원"}
+            { name: "카페라떼", price: "5,500원"},
+            { name: "바닐라라떼", price: "6,000원"},
+            { name: "아인슈패너", price: "6,000원"}
         ]
     },
     {
         id: "cafe16",
         name: "카페쉔",
         phone: "070-7799-0252",
-        position: new naver.maps.LatLng(37.6244170322767, 127.076508640254),
+        position: new naver.maps.LatLng(37.624429, 127.076518),
         menu: [
             { name: "아메리카노", price: "4,000원"},
             { name: "카페라떼", price: "4,500원"},
@@ -195,55 +195,55 @@ var cafes = [
         id: "cafe17",
         name: "우아즈",
         phone: "0507-1444-8092",
-        position: new naver.maps.LatLng(37.6243417702004, 127.077930764632),
+        position: new naver.maps.LatLng(37.624336, 127.077956),
         menu: [
-            { name: "아메리카노", price: "4,000원"},
-            { name: "카페라떼", price: "5,000원"},
-            { name: "아이스크림초코츄러스", price: "5,500원"},
-            { name: "바닐라아이스크림크로플", price: "5,500원"}
+            { name: "타이 홍차 밀크티", price: "5,500원"},
+            { name: "우아즈 에이드", price: "6,500원"},
+            { name: "아이스크림 인절미 꿀호떡", price: "5,800원"},
+            { name: "청귤차", price: "6,000원"}
         ]
     },
     {
         id: "cafe18",
         name: "플랫커피",
         phone: "010-5571-0776",
-        position: new naver.maps.LatLng(37.6238668630707, 127.078334327833),
+        position: new naver.maps.LatLng(37.623851, 127.078342),
         menu: [
             { name: "아메리카노", price: "4,500원"},
-            { name: "엘라도라떼", price: "6,000원"},
-            { name: "바나나푸딩", price: "5,700원"},
-            { name: "약괴푸딩", price: "6,600원"}
+            { name: "엘라도 라떼", price: "6,000원"},
+            { name: "바나나 푸딩", price: "5,700원"},
+            { name: "약과 푸딩", price: "6,600원"}
         ]
     },
     {
         id: "cafe19",
         name: "딜리스",
         phone: "010-9108-3576",
-        position: new naver.maps.LatLng(37.6237132593621, 127.078853540524),
+        position: new naver.maps.LatLng(37.623792, 127.078664),
         menu: [
             { name: "아메리카노", price: "4,000원"},
             { name: "카페라떼", price: "4,500원"},
-            { name: "초콜렛라떼", price: "5,000원"},
-            { name: "앙말차치즈게이크", price: "8,500원"}
+            { name: "말차에스프레소라떼", price: "6,500원"},
+            { name: "자몽블랙티", price: "6,000원"}
         ]
     },
     {
         id: "cafe20",
         name: "샹드마르스커피 공릉점",
         phone: "02-3296-3655",
-        position: new naver.maps.LatLng(37.6234024688784, 127.078100944508),
+        position: new naver.maps.LatLng(37.623392, 127.078107),
         menu: [
-            { name: "아메리카노", price: "4,500원"},
-            { name: "카페라떼", price: "5,000원"},
-            { name: "샐크림크레이프", price: "7,000원"},
-            { name: "당근케이크", price: "6,800원"}
+            { name: "필터드립", price: "변동"},
+            { name: "크림브륄레", price: "5,000원"},
+            { name: "생크림 크레이프", price: "7,000원"},
+            { name: "블랙포레스트 케이크", price: "6,800원"}
         ]
     },
     {
         id: "cafe21",
         name: "원주율",
         phone: "0507-1475-0415",
-        position: new naver.maps.LatLng(37.6222098455948, 127.077671179517),
+        position: new naver.maps.LatLng(37.622180, 127.077791),
         menu: [
             { name: "아메리카노", price: "4,000원"},
             { name: "아인슈페너", price: "5,000원"},
@@ -253,9 +253,9 @@ var cafes = [
     },
     {
         id: "cafe22",
-        name: "무드쉐어",
+        name: "mood share",
         phone: "070-8286-6626",
-        position: new naver.maps.LatLng(37.6215199915024, 127.077896215722),
+        position: new naver.maps.LatLng(37.621480, 127.077934),
         menu: [
             { name: "아메리카노", price: "4,800원"},
             { name: "카라멜아인슈퍼네", price: "6,000원"},
@@ -267,7 +267,7 @@ var cafes = [
         id: "cafe23",
         name: "달콤한순간",
         phone: "02-979-8489",
-        position: new naver.maps.LatLng(37.6214435879015, 127.078440074395),
+        position: new naver.maps.LatLng(37.621438, 127.078430),
         menu: [
             { name: "아이스크림 컵(두가지 맛)", price: "4,500원"},
             { name: "아메리카노", price: "3,500원"},
@@ -277,9 +277,9 @@ var cafes = [
     },
     {
         id: "cafe24",
-        name: "따미커피",
+        name: "ddami coffee",
         phone: "070-7793-1201",
-        position: new naver.maps.LatLng(37.6206432772957, 127.078520676175),
+        position: new naver.maps.LatLng(37.620732, 127.078471),
         menu: [
             { name: "(아이스)더치아메리카노", price: "4,500원"},
             { name: "(아이스)더치라떼", price: "5,000원"},
@@ -291,7 +291,7 @@ var cafes = [
         id: "cafe25",
         name: "카페에이치",
         phone: "0507-1350-7444",
-        position: new naver.maps.LatLng(37.6203814399866, 127.078129047109),
+        position: new naver.maps.LatLng(37.620401, 127.078128),
         menu: [
             { name: "(아이스)아메리카노", price: "4,500원"},
             { name: "(아이스)얼그레이바닐라라떼", price: "5,500원"},
@@ -301,9 +301,9 @@ var cafes = [
     },
     {
         id: "cafe26",
-        name: "영스테이 공릉점",
+        name: "영스테이",
         phone: "010-5838-0572",
-        position: new naver.maps.LatLng(37.6199783051177, 127.07776989574),
+        position: new naver.maps.LatLng(37.620028, 127.077828),
         menu: [
             { name: "와플", price: "3,200원"},
             { name: "크로플", price: "3,200원"},
@@ -315,7 +315,7 @@ var cafes = [
         id: "cafe27",
         name: "메모아",
         phone: "010-3394-9998",
-        position: new naver.maps.LatLng(37.6198675166575, 127.077445712264),
+        position: new naver.maps.LatLng(37.619856, 127.077463),
         menu: [
             { name: "아메리카노", price: "4,500원"},
             { name: "메모아라떼", price: "7,000원"},
@@ -327,7 +327,7 @@ var cafes = [
         id: "cafe28",
         name: "모퉁이",
         phone: "02-948-5563",
-        position: new naver.maps.LatLng(37.6189353035683, 127.077249015615),
+        position: new naver.maps.LatLng(37.618972, 127.077312),
         menu: [
             { name: "아메리카노", price: "3,000원"},
             { name: "더치아메리카노", price: "4,500원"},
@@ -339,7 +339,7 @@ var cafes = [
         id: "cafe29",
         name: "비스킷플로어",
         phone: "010-7709-8610",
-        position: new naver.maps.LatLng(37.6251073136498, 127.073764714187),
+        position: new naver.maps.LatLng(37.625073, 127.073751),
         menu: [
             { name: "아메리카노", price: "4,000원"},
             { name: "플랫화이트", price: "4,500원"},
@@ -351,19 +351,19 @@ var cafes = [
         id: "cafe30",
         name: "오누이",
         phone: "0507-1400-1453",
-        position: new naver.maps.LatLng(37.6246356048244, 127.072377950082),
+        position: new naver.maps.LatLng(37.624632, 127.072399),
         menu: [
-            { name: "누이요거트", price: "6,500원"},
-            { name: "검은콩미숫가루", price: "5,500원"},
+            { name: "수제요거트", price: "6,500원"},
+            { name: "수제그릭요거트", price: "7,500원"},
             { name: "복숭아에이드", price: "6,000원"},
-            { name: "할머니식혜", price: "5,000원"}
+            { name: "그릭후르츠산도", price: "7,500원"}
         ]
     },
     {
         id: "cafe31",
         name: "이너모스트",
         phone: "0507-1493-5612",
-        position: new naver.maps.LatLng(37.6238161697459, 127.072942860447),
+        position: new naver.maps.LatLng(37.623816, 127.072871),
         menu: [
             { name: "아메리카노", price: "3,500원"},
             { name: "카페라떼", price: "4,500원"},
@@ -375,7 +375,7 @@ var cafes = [
         id: "cafe32",
         name: "커피콩",
         phone: "02-977-6164",
-        position: new naver.maps.LatLng(37.6259295668456, 127.071102084744),
+        position: new naver.maps.LatLng(37.625917, 127.071175),
         menu: [
             { name: "옛날빙수", price: "11,900원"},
             { name: "녹차빙수", price: "15,900원"},
