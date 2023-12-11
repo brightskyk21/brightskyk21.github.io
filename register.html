@@ -1,120 +1,70 @@
-.header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
+<!DOCTYPE html>
+<html lang="en">
 
-.review-button-position {
-    margin-top: 20px; /* 원하는 값으로 조정 */
-}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="register.css">
+    <title>Register</title>
+</head>
 
-body {
-    font-family: Arial, sans-serif;
-    background-color: #eceff1;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
+<body>
+    <div class="register-screen">
+        <form id="registerForm" class="register-form">
+            <input type="email" id="registerEmail" placeholder="Email">
+            <input type="password" id="registerPassword" placeholder="Password">
+            <button type="submit">Register</button>
+        </form>
+    </div>
 
-.average-rating {
-    display: flex;
-    align-items: center;
-}
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+        import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-analytics.js";
 
-.average-rating .fas {
-    color: #ffc107; /* 별의 색상 */
-    font-size: 24px; /* 별의 크기 */
-}
+        const firebaseConfig = {
+            apiKey: "AIzaSyCgd7e4IrvCHBNUmZgdqloO4Ys-ZP2Rz4U",
+            authDomain: "gongneungfoodieguide.firebaseapp.com",
+            projectId: "gongneungfoodieguide",
+            storageBucket: "gongneungfoodieguide.appspot.com",
+            messagingSenderId: "980582164185",
+            appId: "1:980582164185:web:bab44b5e0689056b81c0c8",
+            measurementId: "G-JKFNL5FF3J"
+        };
 
-.average-rating #averageRating {
-    font-size: 20px; /* 평점 숫자의 크기 */
-    margin-left: 5px; /* 별과 평점 숫자 사이의 간격 */
-}
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth(app);
+        const analytics = getAnalytics(app);
 
-h1, h2 {
-    margin-top: 20px;
-    font-size: 24px;
-}
+        function validatePassword(input) {
+            const passwordHelp = document.getElementById('passwordHelp');
+            if (input.value.length < 6) {
+                passwordHelp.style.display = 'block';
+            } else {
+                passwordHelp.style.display = 'none';
+            }
+        }
 
-#reviews {
-    margin-top: 20px;
-}
+        document.getElementById('registerForm').addEventListener('submit', async function (event) {
+            event.preventDefault();
+            const email = document.getElementById('registerEmail').value;
+            const password = document.getElementById('registerPassword').value;
 
-#reviewForm {
-    margin-top: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
+            if (password.length < 6) {
+                alert('비밀번호는 6자 이상이어야 합니다.');
+                return; 
+            }
 
-#reviewText {
-    text-align: center;
-}
+            try {
+                await createUserWithEmailAndPassword(auth, email, password);
+                alert('Registration successful!');
+                window.location.href = 'index.html';
+            } catch (error) {
+                console.error('Registration Failed:', error);
+                alert('Registration failed: ' + error.message);
+            }
+        });
+    </script>
+</body>
 
-
-textarea, input[type="number"] {
-    width: 100%;
-    padding: 10px;
-    margin: 5px 0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
-}
-
-button {
-    padding: 10px 20px;
-    background-color: #1ec800;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    margin-top: 10px;
-}
-
-button:hover {
-    background-color: #16a600;
-}
-
-.star-rating .fa-star {
-    color: #8f8d8d;
-    cursor: pointer;
-  }
-  .star-rating .fa-star.checked {
-    color: #ffc107; 
-  }
-
-  .rating-buttons {
-    display: flex;
-    gap: 10px;
-}
-
-.rating-button {
-    padding: 10px;
-    background-color: #ccc;
-    border: none;
-    cursor: pointer;
-}
-
-.rating-button.selected {
-    background-color: #007bff;
-    color: white;
-}
-
-.hidden {
-    display: none;
-  }
-  
-  /* 슬라이드 효과 애니메이션 설정 */
-  #reviewFormContainer {
-    position: fixed;
-    bottom: -100%; /* 폼이 화면 아래에 숨겨져 있음 */
-    left: 0;
-    width: 100%;
-    background-color: #fff;
-    transition: bottom 0.3s ease-in-out; /* 애니메이션 지속 시간 및 이징 함수 설정 */
-    z-index: 1; /* 다른 요소 위에 레이어 설정 */
-  }
+</html>
