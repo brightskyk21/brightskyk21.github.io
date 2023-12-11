@@ -1,6 +1,6 @@
 var restaurants = [
     {
-        id: "restaurants1",
+        id: "restaurant,1",
         name: "쪼매매운떡볶이",
         phone: "02-977-1120",
         position: new naver.maps.LatLng(37.628183, 127.077828),
@@ -12,7 +12,7 @@ var restaurants = [
         ]
     },
     {
-        id: "restaurants2",
+        id: "restaurant,2",
         name: "바우네수제왕돈까스",
         phone: "02-973-9431",
         position: new naver.maps.LatLng(37.630460, 127.075853),
@@ -24,7 +24,7 @@ var restaurants = [
         ]
     },
     {
-        id: "restaurants3",
+        id: "restaurant,3",
         name: "핏짜굽는언니 공릉점",
         phone: "02-979-0234",
         position: new naver.maps.LatLng(37.629482, 127.074760),
@@ -36,7 +36,7 @@ var restaurants = [
         ]
     },
     {
-        id: "restaurants4",
+        id: "restaurant,4",
         name: "더맛나곱창",
         phone: "02-948-5453",
         position: new naver.maps.LatLng(37.629100, 127.073579),
@@ -47,7 +47,7 @@ var restaurants = [
         ]
     },
     {
-        id: "restaurants5",
+        id: "restaurant,5",
         name: "마인하우스",
         phone: "010-9988-7590",
         position: new naver.maps.LatLng(37.630217, 127.075983),
@@ -58,7 +58,7 @@ var restaurants = [
         ]
     },
     {
-        id: "restaurants6",
+        id: "restaurant,6",
         name: "샹츠마라",
         phone: "0507-1383-8288",
         position: new naver.maps.LatLng(37.629611, 127.076026),
@@ -70,7 +70,7 @@ var restaurants = [
         ]
     },
     {
-        id: "restaurants7",
+        id: "restaurant,7",
         name: "찬이네곱창",
         phone: "02-974-3121",
         position: new naver.maps.LatLng(37.628754, 127.076861),
@@ -82,7 +82,7 @@ var restaurants = [
         ]
     },
     {
-        id: "restaurants8",
+        id: "restaurant,8",
         name: "세겹먹는날",
         phone: "02-972-8322",
         position: new naver.maps.LatLng(37.628949, 127.076755),
@@ -94,7 +94,7 @@ var restaurants = [
         ]
     },
     {
-        id: "restaurants9",
+        id: "restaurant,9",
         name: "아리랑핫도그 과학기술대점",
         phone: "02-971-7090",
         position: new naver.maps.LatLng(37.628695, 127.077142),
@@ -106,7 +106,7 @@ var restaurants = [
         ]
     },
     {
-        id: "restaurants10",
+        id: "restaurant,10",
         name: "소문날라",
         phone: "02-974-5252",
         position: new naver.maps.LatLng(37.6282993079139, 127.077315687829),
@@ -118,7 +118,7 @@ var restaurants = [
         ]
     },
     {
-        id: "restaurants11",
+        id: "restaurant,11",
         name: "기린",
         phone: "0507-1319-2708",
         position: new naver.maps.LatLng(37.628091, 127.077527),
@@ -130,7 +130,7 @@ var restaurants = [
         ]
     },
     {
-        id: "restaurants12",
+        id: "restaurant,12",
         name: "이정림수제햄부대찌개",
         phone: "0507-1339-3804",
         position: new naver.maps.LatLng(37.627964, 127.077591),
@@ -142,7 +142,7 @@ var restaurants = [
         ]
     },
     {
-        id: "restaurants13",
+        id: "restaurant,13",
         name: "로지스시",
         phone: "02-972-4003",
         position: new naver.maps.LatLng(37.627675, 127.077612),
@@ -154,7 +154,7 @@ var restaurants = [
         ]
     },
     {
-        id: "restaurants14",
+        id: "restaurant,14",
         name: "네코정",
         phone: "070-4110-5224",
         position: new naver.maps.LatLng(37.6274166134936, 127.07689914049),
@@ -166,7 +166,7 @@ var restaurants = [
         ]
     },
     {
-        id: "restaurants15",
+        id: "restaurant,15",
         name: "열화철판",
         phone: "02-6013-5892",
         position: new naver.maps.LatLng(37.627399, 127.077764),
@@ -178,7 +178,7 @@ var restaurants = [
         ]
     },
     {
-        id: "restaurants16",
+        id: "restaurant,16",
         name: "무봉리토종순대국 공릉점",
         phone: "02-977-7396",
         position: new naver.maps.LatLng(37.627112, 127.076326),
@@ -190,7 +190,7 @@ var restaurants = [
         ]
     },
     {
-        id: "restaurants17",
+        id: "restaurant,17",
         name: "왕짜장",
         phone: "02-972-9822",
         position: new naver.maps.LatLng(37.627419, 127.078213),
@@ -202,7 +202,7 @@ var restaurants = [
         ]
     },
     {
-        id: "restaurants18",
+        id: "restaurant,18",
         name: "스시쟁이",
         phone: "02-972-5944",
         position: new naver.maps.LatLng(37.627179, 127.078450),
@@ -214,7 +214,7 @@ var restaurants = [
         ]
     },
     {
-        id: "restaurants19",
+        id: "restaurant,19",
         name: "원조강영숙봉평메밀촌 본점",
         phone: "02-971-6953",
         position: new naver.maps.LatLng(37.626898, 127.078686),
@@ -226,7 +226,7 @@ var restaurants = [
         ]
     },
     {
-        id: "restaurants20",
+        id: "restaurant,20",
         name: "공릉순두부",
         phone: "070-8151-8229",
         position: new naver.maps.LatLng(37.6270452076453, 127.079108885797),
@@ -238,7 +238,7 @@ var restaurants = [
         ]
     },
     {
-        id: "restaurants21",
+        id: "restaurant,21",
         name: "지호한방삼계탕 공릉점",
         phone: "02-948-2300",
         position: new naver.maps.LatLng(37.626076, 127.079888),
@@ -250,7 +250,7 @@ var restaurants = [
         ]
     },
     {
-        id: "restaurants22",
+        id: "restaurant,22",
         name: "로지다이닝키친",
         phone: "02-974-0100",
         position: new naver.maps.LatLng(37.626151, 127.078600),
@@ -262,7 +262,7 @@ var restaurants = [
         ]
     },
     {
-        id: "restaurants23",
+        id: "restaurant23",
         name: "등촌샤브칼국수 공릉점",
         phone: "02-949-1170",
         position: new naver.maps.LatLng(37.625828, 127.079695),
@@ -274,7 +274,7 @@ var restaurants = [
         ]
     },
     {
-        id: "restaurants24",
+        id: "restaurant24",
         name: "알러이",
         phone: "02-977-3011",
         position: new naver.maps.LatLng(37.626007, 127.0787069),
@@ -286,7 +286,7 @@ var restaurants = [
         ]
     },
     {
-        id: "restaurants25",
+        id: "restaurant25",
         name: "일상다반",
         phone: "02-971-0666",
         position: new naver.maps.LatLng(37.626160, 127.076883),
@@ -298,7 +298,7 @@ var restaurants = [
         ]
     },
     {
-        id: "restaurants26",
+        id: "restaurant26",
         name: "원조이모네연탄불곱창",
         phone: "02-973-4658",
         position: new naver.maps.LatLng(37.626570, 127.075661),
@@ -310,7 +310,7 @@ var restaurants = [
         ]
     },
     {
-        id: "restaurants27",
+        id: "restaurant27",
         name: "가원양꼬치",
         phone: "070-4133-0539",
         position: new naver.maps.LatLng(37.6265202574678, 127.075589368289),
@@ -322,7 +322,7 @@ var restaurants = [
         ]
     },
     {
-        id: "restaurants28",
+        id: "restaurant28",
         name: "신미방마라탕 공릉점",
         phone: "0507-1428-3346",
         position: new naver.maps.LatLng(37.625889, 127.075381),
@@ -334,7 +334,7 @@ var restaurants = [
         ]
     },
     {
-        id: "restaurants29",
+        id: "restaurant29",
         name: "시작이밤이다",
         phone: "010-7148-3119",
         position: new naver.maps.LatLng(37.625864, 127.074973),
@@ -346,7 +346,7 @@ var restaurants = [
         ]
     },
     {
-        id: "restaurants30",
+        id: "restaurant30",
         name: "아소코",
         phone: "02-6052-1003",
         position: new naver.maps.LatLng(37.624614, 127.076626),
@@ -358,7 +358,7 @@ var restaurants = [
         ]
     },
     {
-        id: "restaurants31",
+        id: "restaurant31",
         name: "인차이나",
         phone: "02-971-4009",
         position: new naver.maps.LatLng(37.624904, 127.079609),
@@ -370,7 +370,7 @@ var restaurants = [
         ]
     },
     {
-        id: "restaurants32",
+        id: "restaurant32",
         name: "비스트로 무크",
         phone: "070-8111-3257",
         position: new naver.maps.LatLng(37.624461, 127.076089),
@@ -382,7 +382,7 @@ var restaurants = [
         ]
     },
     {
-        id: "restaurants33",
+        id: "restaurant33",
         name: "오대양횟집",
         phone: "02-979-6936",
         position: new naver.maps.LatLng(37.622737, 127.076261),
@@ -394,7 +394,7 @@ var restaurants = [
         ]
     },
     {
-        id: "restaurants34",
+        id: "restaurant34",
         name: "닭한마리 공릉본점",
         phone: "02-972-7459",
         position: new naver.maps.LatLng(37.621250, 127.074716),
@@ -406,7 +406,7 @@ var restaurants = [
         ]
     },
     {
-        id: "restaurants35",
+        id: "restaurant35",
         name: "공도",
         phone: "0507-1435-5890",
         position: new naver.maps.LatLng(37.621132, 127.075403),
@@ -418,7 +418,7 @@ var restaurants = [
         ]
     },
     {
-        id: "restaurants36",
+        id: "restaurant36",
         name: "에그머니",
         phone: "02-977-2999",
         position: new naver.maps.LatLng(37.6195389066918, 127.075951334662),
@@ -430,7 +430,7 @@ var restaurants = [
         ]
     },
     {
-        id: "restaurants37",
+        id: "restaurant37",
         name: "코쿠카츠",
         phone: "02-6014-3225",
         position: new naver.maps.LatLng(37.620451, 127.078171),
@@ -442,7 +442,7 @@ var restaurants = [
         ]
     },
     {
-        id: "restaurants38",
+        id: "restaurant38",
         name: "오늘의파스타",
         phone: "02-977-7764",
         position: new naver.maps.LatLng(37.620655, 127.078364),
@@ -454,7 +454,7 @@ var restaurants = [
         ]
     },
     {
-        id: "restaurants39",
+        id: "restaurant39",
         name: "하노이별 공릉점",
         phone: "02-975-7470",
         position: new naver.maps.LatLng(37.622048, 127.078600),
@@ -466,7 +466,7 @@ var restaurants = [
         ]
     },
     {
-        id: "restaurants40",
+        id: "restaurant40",
         name: "페페그라노",
         phone: "0507-1308-0570",
         position: new naver.maps.LatLng(37.622049, 127.079630),
@@ -478,7 +478,7 @@ var restaurants = [
         ]
     },
     {
-        id: "restaurants41",
+        id: "restaurant41",
         name: "웨일스",
         phone: "070-4647-0210",
         position: new naver.maps.LatLng(37.622873, 127.078064),
@@ -490,7 +490,7 @@ var restaurants = [
         ]
     },
     {
-        id: "restaurants42",
+        id: "restaurant42",
         name: "차차",
         phone: "0507-1343-9959",
         position: new naver.maps.LatLng(37.622958, 127.079223),
@@ -502,7 +502,7 @@ var restaurants = [
         ]
     },
     {
-        id: "restaurants43",
+        id: "restaurant43",
         name: "주세프명인",
         phone: "02-948-1395",
         position: new naver.maps.LatLng(37.623188, 127.080703),
@@ -514,7 +514,7 @@ var restaurants = [
         ]
     },
     {
-        id: "restaurants44",
+        id: "restaurant44",
         name: "솔직하다",
         phone: "0507-1388-4898",
         position: new naver.maps.LatLng(37.624284, 127.080059),
@@ -526,7 +526,7 @@ var restaurants = [
         ]
     },
     {
-        id: "restaurants45",
+        id: "restaurant45",
         name: "퍼스트쿡카츠",
         phone: "0507-1336-4029",
         position: new naver.maps.LatLng(37.624606, 127.079158),
@@ -538,7 +538,7 @@ var restaurants = [
         ]
     },
     {
-        id: "restaurants46",
+        id: "restaurant46",
         name: "경성초밥",
         phone: "02-978-8864",
         position: new naver.maps.LatLng(37.621012, 127.0782558),
@@ -550,7 +550,7 @@ var restaurants = [
         ]
     },
     {
-        id: "restaurants47",
+        id: "restaurant47",
         name: "스시락2호점",
         phone: "02-6080-0228",
         position: new naver.maps.LatLng(37.623171, 127.079544),
@@ -562,7 +562,7 @@ var restaurants = [
         ]
     },
     {
-        id: "restaurants48",
+        id: "restaurant48",
         name: "디에트로",
         phone: "0507-1307-9944",
         position: new naver.maps.LatLng(37.623119, 127.076219),
@@ -574,7 +574,7 @@ var restaurants = [
         ]
     },
     {
-        id: "restaurants49",
+        id: "restaurant49",
         name: "태릉양꼬치양갈비",
         phone: "0507-1319-4587",
         position: new naver.maps.LatLng(37.620111, 127.078064),
@@ -586,7 +586,7 @@ var restaurants = [
         ]
     },
     {
-        id: "restaurants50",
+        id: "restaurant50",
         name: "제일콩집",
         phone: "02-972-7016",
         position: new naver.maps.LatLng(37.619551, 127.077592),
@@ -598,7 +598,7 @@ var restaurants = [
         ]
     },
     {
-        id: "restaurants51",
+        id: "restaurant51",
         name: "석천숯불갈비",
         phone: "02-976-0258",
         position: new naver.maps.LatLng(37.619576, 127.074738),
@@ -610,7 +610,7 @@ var restaurants = [
         ]
     },
     {
-        id: "restaurants52",
+        id: "restaurant52",
         name: "히딩크의 추억",
         phone: "02-978-9295",
         position: new naver.maps.LatLng(37.623647, 127.073944),
